@@ -1,0 +1,550 @@
+--- a/agent_try.py	2026-09-26 19:49:22
++++ b/agent_try.py	2026-09-26 19:49:22
+@@ -12,6 +12,7 @@
+ from autogen.agentchat.contrib.capabilities import transform_messages, transforms
+ from autogen.agentchat.contrib.capabilities.text_compressors import LLMLingua
+ from autogen.agentchat.contrib.capabilities.transforms import TextMessageCompressor
++from autogen.oai.client import OpenAIWrapper
+ from openai import OpenAI
+ 
+ import re
+@@ -50,14 +51,31 @@
+ #         ...
+ 
+ 
+-url = "https://svip.xty.app/v1"
++url = os.environ.get("STORYW_API_BASE", "http://127.0.0.1:8000/v1")
++MODEL = os.environ.get("STORYW_MODEL", "Qwen3.5-4B")
++API_KEY = os.environ.get("STORYW_API_KEY", "EMPTY")
++CLIENT_MAX_RETRIES = int(os.environ.get("STORYW_MAX_RETRIES", "1"))
++DISABLE_THINKING = os.environ.get("STORYW_DISABLE_THINKING", "0") == "1"
++# 10k 对比实验统一使用同一个单次输出硬上限。它只防止服务端截断，
++# 各阶段的实际篇幅仍由 prompt、终止协议和全文 ±20% 校验决定。
++MAX_TOKENS = int(os.environ.get("STORYW_MAX_TOKENS", "32768"))
+ # Setup API key. Add your own API key to config file or environment variable
+ config_list = [
+     {
+-        "model":"gpt-4o-mini-2024-07-18",
++        "model": MODEL,
+         "base_url": url,
+-        'api_key': "REDACTED_API_KEY",
+-        'api_type':"openai"
++        'api_key': API_KEY,
++        'api_type':"openai",
++        'max_retries': CLIENT_MAX_RETRIES,
++        **(
++            {
++                "extra_body": {
++                    "chat_template_kwargs": {"enable_thinking": False}
++                }
++            }
++            if DISABLE_THINKING
++            else {}
++        ),
+     },
+ ]
+ 
+@@ -66,6 +84,80 @@
+ condensed_cache = {}
+ 
+ 
++def normalize_message_content(messages: List[Dict]) -> List[Dict]:
++    """把 AutoGen 产生的空占位消息转换成 vLLM 可接受的请求。
++
++    AutoGen 的顺序聊天会把没有正文的上一代理结果作为
++    ``{"role": "user", "content": None, "tool_calls": []}`` 传给下一代理。
++    OpenAI 客户端允许构造该对象，但 vLLM 的 Chat Completions schema
++    要求普通 user 消息的 content 必须是字符串或内容数组，因此直接返回
++    HTTP 400。空字符串保留原有轮次和 name，同时不凭空加入剧情信息。
++    """
++    normalized = copy.deepcopy(messages)
++    for message in normalized:
++        if (
++            message.get("content") is None
++            and not message.get("tool_calls")
++        ):
++            message["content"] = ""
++    return normalized
++
++
++def install_openai_wrapper_normalizer() -> None:
++    """在 AutoGen 最终发出请求前再次正规化消息。
++
++    ``TransformMessages`` 只处理 agent 当时已有的历史；AutoGen 的顺序聊天
++    会在 transform 执行后再插入上一个代理的空占位结果，因此仍可能把
++    ``content=None`` 交给 vLLM。包装 ``OpenAIWrapper.create`` 能覆盖所有
++    对话路径，同时只改变非法空内容，不改变角色、轮次或剧情信息。
++    """
++    if getattr(OpenAIWrapper.create, "_storywriter_normalized", False):
++        return
++    original_create = OpenAIWrapper.create
++
++    def normalized_create(self, **config):
++        config = dict(config)
++        messages = config.get("messages")
++        if isinstance(messages, list):
++            config["messages"] = normalize_message_content(messages)
++        if DISABLE_THINKING:
++            extra_body = dict(config.get("extra_body") or {})
++            chat_template_kwargs = dict(
++                extra_body.get("chat_template_kwargs") or {}
++            )
++            chat_template_kwargs["enable_thinking"] = False
++            extra_body["chat_template_kwargs"] = chat_template_kwargs
++            config["extra_body"] = extra_body
++        return original_create(self, **config)
++
++    normalized_create._storywriter_normalized = True
++    OpenAIWrapper.create = normalized_create
++
++
++install_openai_wrapper_normalizer()
++
++
++class NormalizeMessageContent:
++    """供所有 AutoGen 代理使用的轻量消息正规化 transform。"""
++
++    def apply_transform(self, messages: List[Dict]) -> List[Dict]:
++        return normalize_message_content(messages)
++
++    def get_logs(
++            self,
++            pre_transform_messages: List[Dict],
++            post_transform_messages: List[Dict],
++    ) -> Tuple[str, bool]:
++        changed = any(
++            before.get("content") != after.get("content")
++            for before, after in zip(
++                pre_transform_messages,
++                post_transform_messages,
++            )
++        )
++        return "normalized empty message content", changed
++
++
+ class MessageRedact:
+     def __init__(self):
+         self._openai_key_pattern = r"sk-([a-zA-Z0-9]{48})"
+@@ -74,29 +166,81 @@
+         self.condensed_cache = {} 
+ 
+     def apply_transform(self, messages: List[Dict]) -> List[Dict]:
+-        temp_messages = copy.deepcopy(messages)
++        temp_messages = normalize_message_content(messages)
+         
+         if len(temp_messages)>2:
+             client = OpenAI(
+-                        api_key="REDACTED_API_KEY",
+-                        base_url="https://svip.xty.app/v1",
+-                    )
+-            for message in temp_messages[1:-2]:  
+-                # message_id = hash(message["content"])
+-                message_id = hash(message["content"])
+-                prompt="Please condense the following story to 10% percent of its original length, retaining the key plot points, character conflicts, and the twist or resolution at the end. Omit lengthy descriptions of the setting and minor dialogues, ensuring the condensed version still clearly conveys the core progression of the story."
+-                print(message["role"],len(message["content"]))
+-                
+-                if len(message["content"])>150:
++                api_key=API_KEY,
++                base_url=url,
++                timeout=180.0,
++                max_retries=CLIENT_MAX_RETRIES,
++            )
++            try:
++                for message in temp_messages[1:-2]:
++                    content = message.get("content")
++                    # 原实现会压缩所有角色的旧消息，因而把 critic 的控制指令
++                    # 也改写成“请提供全文”等新指令，随后写作对话便会角色串线。
++                    # 消息压缩的目标是保存旧正文的剧情，不应改写控制协议；因此
++                    # 只压缩 writer 已经生成的 assistant 正文。
++                    if (
++                        message.get("role") != "assistant"
++                        or not isinstance(content, str)
++                        or len(content) <= 150
++                    ):
++                        continue
++                    message_id = hash(content)
+                     if message_id in self.condensed_cache:
+-                        print(f"Using cached condensed message for: {message['role']}")
+                         message["content"] = self.condensed_cache[message_id]
+-                    else:
+-                        message["content"]=completion = client.chat.completions.create(
+-                            model="gpt-4o-mini-2024-07-18",
+-                            messages=[{"role": "user", "content": prompt+"\n"+message["content"]}],
+-                            ).choices[0].message.content
++                        continue
++
++                    prompt = (
++                        "Condense the COMPLETE story segment below to about 10% "
++                        "of its original length. Preserve plot progress, character "
++                        "conflict, causal facts, and twists. Return only the "
++                        "condensed story facts. The supplied segment is complete: "
++                        "never request more text, never give instructions, never "
++                        "refuse, and never add meta-commentary."
++                    )
++                    request_options = {}
++                    if DISABLE_THINKING:
++                        request_options["extra_body"] = {
++                            "chat_template_kwargs": {
++                                "enable_thinking": False
++                            }
++                        }
++                    response = client.chat.completions.create(
++                        model=MODEL,
++                        messages=[
++                            {"role": "system", "content": prompt},
++                            {"role": "user", "content": content},
++                        ],
++                        max_tokens=MAX_TOKENS,
++                        **request_options,
++                    )
++                    completion = response.choices[0].message.content or ""
++                    # 压缩调用异常返回元话语时，保留原正文比污染写作轨迹更安全。
++                    unsafe_markers = (
++                        "provide the complete",
++                        "provide the full",
++                        "share the complete",
++                        "无法提供",
++                        "无法给到",
++                        "作为一个",
++                        "as an ai",
++                    )
++                    if (
++                        completion.strip()
++                        and not any(
++                            marker in completion.lower()
++                            for marker in unsafe_markers
++                        )
++                    ):
++                        message["content"] = completion
+                         self.condensed_cache[message_id] = completion
++            finally:
++                # 此 transform 会被多线程、高频调用。显式关闭客户端，避免
++                # 累积 CLOSE_WAIT 连接并最终拖垮整个 StoryWriter 进程。
++                client.close()
+                 # if isinstance(message["content"], str):
+                 #     if not re.search(r"\bEvent\b", message["content"], re.IGNORECASE):
+                 #         message["content"]="" 
+@@ -106,7 +250,6 @@
+                 #         item for item in message["content"]
+                 #         if item["type"] == "text" and re.search(r"\bEvent\b", item["text"], re.IGNORECASE)
+                 #     ]
+-        print("temp_messages:",temp_messages)
+         # file_path = os.path.join("./writer_input")
+         # print(file_path)
+         # with open(file_path+"/input.json", "w") as file:
+@@ -138,6 +281,9 @@
+     #                         count += 1
+     #     return count
+ redact_handling = transform_messages.TransformMessages(transforms=[MessageRedact()])
++normalize_handling = transform_messages.TransformMessages(
++    transforms=[NormalizeMessageContent()]
++)
+ 
+ 
+ # event = ConversableAgent(name="event model",
+@@ -164,6 +310,7 @@
+                      llm_config={
+                          "config_list": config_list,
+                          "temperature": 1,
++                         "max_tokens": MAX_TOKENS,
+                      },
+                     #  max_consecutive_auto_reply=1, 
+                      is_termination_msg=lambda msg: msg.get("content") is not None and "Epilogue" in msg["content"],
+@@ -183,25 +330,31 @@
+ # save the chat_history of the event generate   
+ def event_generate(premise,id,output_prefix):
+     event = ConversableAgent(name="event_model",
+-                     system_message="""Generate an event outline based on the premise. Here is an example: Event n: {EVENT1} Setting:{SETTING}\nCharacter:{CHARACTER}\nAction:{ACTION}\nConflict:{CONFLICT}\nPlot Twist:{PLOT_TWIST}\n""",
++                     system_message="""Generate ONLY an outline of 5 to 10 major events based on the premise; never write story prose. Use this exact block format: Event n: {EVENT1} Setting:{SETTING}\nCharacter:{CHARACTER}\nAction:{ACTION}\nConflict:{CONFLICT}\nPlot Twist:{PLOT_TWIST}\n""",
+                      llm_config={
+                          "config_list": config_list,
+                          "temperature": 1,
++                         "max_tokens": MAX_TOKENS,
+                      },
+                      human_input_mode="NEVER",
+                     #  max_consecutive_auto_reply=1,
+                      is_termination_msg=lambda msg: msg.get("content") is not None and "TERMINATE" in msg["content"],
+                      )
+     event_rerank = ConversableAgent(name="event_rerank_model",
+-                     system_message="Check if the events structrue is coherent and make sense.If not, Reply re-generate.If the events are good and coherent enough reply TERMINATE when the events are good and coherent enough",
++                     system_message="Review only the event outline; never write story prose. If it is incoherent, reply only with a concise request to regenerate it. If it is coherent, reply only TERMINATE.",
+                      llm_config={
+                          "config_list": config_list,
+                          "temperature": 1,
++                         "max_tokens": MAX_TOKENS,
+                      },
+                      human_input_mode="NEVER",
+                     #  max_consecutive_auto_reply=1, 
+                      is_termination_msg=lambda msg: msg.get("content") is not None and "TERMINATE" in msg["content"],
+                      )
++    # Qwen thinking 响应偶尔会被旧版 AutoGen 记录成 content=None。两个
++    # 大纲代理都必须在下一次请求前正规化整个历史，不能只处理正文代理。
++    normalize_handling.add_to_agent(event)
++    normalize_handling.add_to_agent(event_rerank)
+     premise = premise             
+     try_count = 0
+     while try_count < 5:
+@@ -209,10 +362,23 @@
+ 
+             print(f"try to generate events for the {try_count} time")
+ 
+-            event_rerank.initiate_chat(event, message="Premise:"+premise,detail="aa",max_turns=100)
++            # 大纲评审不需要几十轮对话。Qwen 若没有及时输出 TERMINATE，
++            # 原来的 100 轮会不断携带全文式错误输出，直到超过 262k 上下文
++            # 并收到 HTTP 400。六轮足够完成三次“生成—评审”闭环。
++            event_rerank.initiate_chat(
++                event,
++                message="Premise:" + premise,
++                detail="aa",
++                max_turns=6,
++                clear_history=True,
++            )
+             break
+         except Exception as e:
+             try_count += 1
++            print(
++                f"event_generate attempt {try_count}/5 failed: "
++                f"{type(e).__name__}: {e!r}"
++            )
+             if try_count >= 5:
+                 print(f"give up after {try_count} time")
+                 return "None" #
+@@ -223,15 +389,82 @@
+         json.dump(message, file, ensure_ascii=False, indent=4)
+     return message
+ 
++def _reformat_to_events(text, premise_hint=""):
++    """Fallback: ask the LLM to reformat free-form chat output into the
++    `Event N: ... Setting:{...} Character:{...} ...` template the regex
++    expects. Used when the strict pattern produces zero matches; without
++    this, sub_events agent receives an empty event_str and falls back to
++    the system-prompt demo (Annual Conference / Venue Selection)."""
++    from openai import OpenAI
++    client = OpenAI(
++        api_key=API_KEY,
++        base_url=url,
++        max_retries=CLIENT_MAX_RETRIES,
++    )
++    prompt = (
++        "You are given a draft story or outline. Re-emit ONLY a list of "
++        "5 to 10 plot events in this exact template (one per block, blank "
++        "line between blocks, no other text):\n"
++        "Event 1: {EVENT NAME}\n"
++        "Setting:{SETTING}\n"
++        "Character:{CHARACTER}\n"
++        "Action:{ACTION}\n"
++        "Conflict:{CONFLICT}\n"
++        "Plot Twist:{PLOT TWIST}\n"
++        "\n"
++        "Event 2: ...\n\n"
++        f"Premise (for grounding): {premise_hint}\n\n"
++        f"Draft to reformat:\n{text[:8000]}"
++    )
++    try:
++        request_options = {}
++        if DISABLE_THINKING:
++            request_options["extra_body"] = {
++                "chat_template_kwargs": {"enable_thinking": False}
++            }
++        resp = client.chat.completions.create(
++            model=MODEL,
++            messages=[{"role": "user", "content": prompt}],
++            max_tokens=MAX_TOKENS, temperature=0.7,
++            **request_options)
++        m = resp.choices[0].message
++        c = m.content or ""
++        if not c:
++            d = m.model_dump()
++            r = d.get("reasoning", "") or ""
++            c = r.split("</think>", 1)[-1] if "</think>" in r else r
++        return c
++    except Exception:
++        return ""
++
++
+ def event_extract(text_data,id,output_prefix):
+     print(text_data)
+-    event_pattern = r'(Event \d+:.*?)(?=\n\n|$)'  
++    event_pattern = r'(Event \d+:.*?)(?=\n\n|$)'
+ 
+     events = []
+-    for text in text_data:
++    # 一次评审可能留下多个候选大纲；应使用最新一份可解析的大纲，不能把
++    # 各轮 Event 1..N 全部拼接，否则章节数会成倍膨胀并破坏分段字数。
++    for text in reversed(text_data):
+         matches = re.findall(event_pattern, text, re.DOTALL)
+-        events.extend(matches)
++        if matches:
++            events = matches[:10]
++            break
+ 
++    if not events:
++        # Fallback: 4B model often writes the story directly instead of
++        # the structured event list. Re-prompt it to reformat.
++        print("No events matched; invoking reformat fallback.")
++        premise_hint = text_data[0] if text_data else ""
++        # Try the longest output first (most likely the full draft)
++        candidates = sorted(text_data, key=len, reverse=True)
++        for cand in candidates[:2]:
++            reformatted = _reformat_to_events(cand, premise_hint)
++            matches = re.findall(event_pattern, reformatted, re.DOTALL)
++            if matches:
++                events = matches
++                break
++
+     if events:
+         print("Extracted Events:\n")
+         for idx, event in enumerate(events, 1):
+@@ -256,13 +489,26 @@
+     print(event_str)
+     return event_str
+ 
+-def story_generate(event_str,id,output_prefix):
++def story_generate(event_str, id, output_prefix, target_words=10000,
++                   segment_words=None, length_feedback=""):
+     # print("???????????????",event_str)
++    event_count = max(
++        1,
++        len(re.findall(r"Event\s*\d+\s*:", event_str, re.IGNORECASE)),
++    )
++    estimated_segments = max(1, event_count * 3)
++    if segment_words is None:
++        segment_words = max(250, round(target_words / estimated_segments))
++    segment_min = max(1, int(segment_words * 0.8 + 0.999999))
++    segment_max = max(segment_min, int(segment_words * 1.2))
++    # 单段调用使用统一硬上限；整体长度由多轮 StoryN.M 分段共同形成。
++    story_max_tokens = MAX_TOKENS
+     episode_critc = ConversableAgent(name="episode_critc_model",
+                      system_message="Focus on the relationships between events, and don’t let the story deviate from the outlines.",
+                      llm_config={
+                          "config_list": config_list,
+                          "temperature": 0.4,
++                         "max_tokens": MAX_TOKENS,
+                      },
+                      human_input_mode="NEVER",
+                     #  max_consecutive_auto_reply=1,  
+@@ -270,10 +516,20 @@
+                      )
+ 
+     story_writer = ConversableAgent(name="story_writer_model",
+-                        system_message="""Generate a story for one sub-event at a time in sequence in this format: Story1.1{Story1.1}. Reply "TERMINATE" only when it comes to the last sub-event.""",
++                        system_message=(
++                            "Generate the complete prose for one sub-event at "
++                            "a time in sequence in the format "
++                            "Story1.1{complete prose}. Each StoryN.M segment "
++                            f"must contain {segment_min}-{segment_max} words "
++                            f"(target {segment_words}), so the assembled story "
++                            f"reaches about {target_words} words. Do not return "
++                            "an outline or commentary. Reply TERMINATE only "
++                            "after the last sub-event."
++                        ),
+                         llm_config={
+                             "config_list": config_list,
+                             "temperature": 1,
++                            "max_tokens": story_max_tokens,
+                         },
+                         human_input_mode="NEVER",
+                         #  max_consecutive_auto_reply=1,  
+@@ -285,6 +541,7 @@
+                         llm_config={
+                             "config_list": config_list,
+                             "temperature": 0.5,# todo
++                            "max_tokens": MAX_TOKENS,
+                         },
+                         human_input_mode="NEVER",
+                         #  max_consecutive_auto_reply=1,  
+@@ -295,6 +552,7 @@
+                         llm_config={
+                             "config_list": config_list,
+                             "temperature": 0.5,# todo
++                            "max_tokens": MAX_TOKENS,
+                         },
+                         human_input_mode="NEVER",
+                          max_consecutive_auto_reply=1, 
+@@ -305,21 +563,44 @@
+                         llm_config={
+                             "config_list": config_list,
+                             "temperature": 1,# todo
++                            "max_tokens": MAX_TOKENS,
+                         },
+                         human_input_mode="NEVER",
+                         #  max_consecutive_auto_reply=1,  
+                         is_termination_msg=lambda msg: msg.get("content") is not None and "THE END" in msg["content"],
+                         )
+     story_critic = ConversableAgent(name="story_critic",
+-                        system_message="""You need to ensure that the story generation agent does not deviate from the outline. If it deviates, please rewrite or revise this sub-event in the following format: "**RE-WRITE**:{RE-WRITE}\n Next sub-event is:{Next_sub_event}".If there is no deviation, please reply Next sub-event:{NEXT_SUB_EVENT}""",
++                        system_message=(
++                            "Ensure that each generated story segment follows "
++                            "the supplied event outline. Always continue the "
++                            "protocol; never refuse, ask for missing context, "
++                            "or discuss the task. If a segment deviates, reply "
++                            "only in this format: **RE-WRITE**:{RE-WRITE}\\n"
++                            "Next sub-event:{NEXT_SUB_EVENT}. If it is valid "
++                            "and events remain, reply only: Next sub-event:"
++                            "{NEXT_SUB_EVENT}. After the final sub-event, "
++                            "reply only: TERMINATE."
++                        ),
+                         llm_config={
+                             "config_list": config_list,
+                             "temperature": 0.2,# todo
++                            "max_tokens": MAX_TOKENS,
+                         },
+                         human_input_mode="NEVER",
+                         #  max_consecutive_auto_reply=1,  
+                         is_termination_msg=lambda msg: msg.get("content") is not None and "TERMINATE" in msg["content"],
+                         )
++    # 顺序聊天会在这些代理之间携带空占位结果；任何一个收件代理都可能
++    # 成为下一次 Chat Completions 请求的发起者，因此逐一安装正规化层。
++    for agent in (
++        episode_critc,
++        story_writer,
++        sub_events,
++        disperse_events,
++        chapter_writer,
++        story_critic,
++    ):
++        normalize_handling.add_to_agent(agent)
+     
+     try_count = 0
+     while try_count < 5:
+@@ -340,12 +621,21 @@
+                 {
+                     "sender":story_critic,
+                     "recipient":story_writer, 
+-                    "message":"generate one sub-story at a time. Do not reply other words",
++                    "message":(
++                        "Generate one complete sub-story at a time. "
++                        f"Each sub-story target is {segment_words} words and "
++                        f"the whole assembled story target is {target_words} "
++                        f"words. Do not reply other words. {length_feedback}"
++                    ),
+                     "max_turns":50,},
+             ])
+             break
+         except Exception as e:
+             try_count += 1
++            print(
++                f"story_generate attempt {try_count}/5 failed: "
++                f"{type(e).__name__}: {e!r}"
++            )
+             if try_count >= 5:
+                 print(f"give up after {try_count} attempts")
+                 return "stop"  
+@@ -364,4 +654,15 @@
+     file_story_path=os.path.join(output_prefix+"/final_story", stt)
+     with open(file_story_path, "w") as file:
+         json.dump(message_story, file, ensure_ascii=False, indent=4)
+-    return "finish"
+\ No newline at end of file
++    terminated = any(
++        isinstance(message, str) and "TERMINATE" in message
++        for message in message_story
++    )
++    return {
++        "stage": "finish",
++        "terminated": terminated,
++        "event_count": event_count,
++        "estimated_segments": estimated_segments,
++        "segment_target": segment_words,
++        "story_max_tokens": story_max_tokens,
++    }

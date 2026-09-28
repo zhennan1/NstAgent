@@ -1,0 +1,22 @@
+# Python 3.11 (the WritingBench evaluator needs >= 3.10). Versions are the ones the paper's runs used.
+
+# generation, ConStory-Bench and WritingBench evaluation, analysis
+openai==2.29.0
+httpx==0.28.1
+aiohttp==3.13.3
+tqdm==4.67.3
+jieba==0.42.1
+numpy==1.26.4
+pandas==3.0.1
+scipy==1.17.1
+tabulate==0.10.0
+pyyaml==6.0.3
+matplotlib==3.9.4
+
+# DOME adapter only (also needs a running Neo4j 5 server)
+# neo4j==5.18.0
+# sentence-transformers==5.5.1
+# scikit-learn==1.8.0
+
+# StoryWriter adapter only
+# pyautogen==0.2.35

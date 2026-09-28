@@ -1,0 +1,2 @@
+- name: narrative_ops
+  _target_: native_agent_loop.SegmentedNarrativeOpsLoop

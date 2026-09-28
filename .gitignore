@@ -1,0 +1,8 @@
+# stories are downloaded from Hugging Face (see README)
+results/stories/
+__pycache__/
+*.pyc
+.DS_Store
+# upstream baselines cloned locally
+code/baselines/StoryWriter/
+code/baselines/Generating-Long-form-Story-Using-Dynamic-Hierarchical-Outlining-with-Memory-Enhancement/

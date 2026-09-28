@@ -1,0 +1,170 @@
+[
+ {
+  "arm": "deepseek/nstagent_10k",
+  "window": "full",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "deepseek/nstagent_20k",
+  "window": "last7",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "deepseek/nstagent_50k",
+  "window": "last5",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "deepseek/nstagent_100k",
+  "window": "last4",
+  "constory_stories": 50,
+  "writingbench_stories": 50,
+  "stories": 50
+ },
+ {
+  "arm": "deepseek/rollsum_10k",
+  "window": "full",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "deepseek/rollsum_20k",
+  "window": "last8",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "deepseek/rollsum_50k",
+  "window": "last5",
+  "constory_stories": 96,
+  "writingbench_stories": 96,
+  "stories": 96
+ },
+ {
+  "arm": "deepseek/rollsum_100k",
+  "window": "last4",
+  "constory_stories": 50,
+  "writingbench_stories": 50,
+  "stories": 50
+ },
+ {
+  "arm": "deepseek/direct_10k",
+  "window": "full",
+  "constory_stories": 99,
+  "writingbench_stories": 99,
+  "stories": 99
+ },
+ {
+  "arm": "deepseek/storywriter_10k",
+  "window": "full",
+  "constory_stories": 98,
+  "writingbench_stories": 98,
+  "stories": 98
+ },
+ {
+  "arm": "deepseek/ablation_no_state_20k",
+  "window": "last7",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "deepseek/ablation_no_lookback_20k",
+  "window": "last7",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "luna/nstagent_10k",
+  "window": "full",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "luna/nstagent_20k",
+  "window": "last7",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "luna/nstagent_50k",
+  "window": "last5",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "luna/nstagent_100k",
+  "window": "last4",
+  "constory_stories": 50,
+  "writingbench_stories": 50,
+  "stories": 50
+ },
+ {
+  "arm": "luna/rollsum_10k",
+  "window": "full",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "luna/rollsum_20k",
+  "window": "last7",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "luna/rollsum_50k",
+  "window": "last5",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "luna/direct_10k",
+  "window": "full",
+  "constory_stories": 97,
+  "writingbench_stories": 97,
+  "stories": 97
+ },
+ {
+  "arm": "luna/storywriter_10k",
+  "window": "full",
+  "constory_stories": 100,
+  "writingbench_stories": 100,
+  "stories": 100
+ },
+ {
+  "arm": "deepseek/dome_10k_20prompts",
+  "window": "full",
+  "constory_stories": 20,
+  "writingbench_stories": 20,
+  "stories": 20
+ },
+ {
+  "arm": "luna/dome_10k_20prompts",
+  "window": "full",
+  "constory_stories": 20,
+  "writingbench_stories": 20,
+  "stories": 20
+ },
+ {
+  "arm": "luna/rollsum_100k",
+  "window": "last4",
+  "constory_stories": 50,
+  "writingbench_stories": 50,
+  "stories": 50
+ }
+]

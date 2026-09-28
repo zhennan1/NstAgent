@@ -1,0 +1,1584 @@
+{
+ "10k::DeepSeek-V4-Flash": {
+  "RollSum::sub": {
+   "n": 100,
+   "diff": -1.4404724423108575,
+   "lo": -1.8619034443197109,
+   "hi": -1.0269867661639933,
+   "t": 1.0659188513798955e-09,
+   "w": 1.5490144071327087e-08,
+   "p_holm": 2.131837702759791e-09
+  },
+  "RollSum::ins": {
+   "n": 100,
+   "diff": -2.7792463992561833,
+   "lo": -3.653653318321061,
+   "hi": -1.9476604322440634,
+   "t": 9.244226793676306e-09,
+   "w": 6.89027241046785e-09,
+   "p_holm": 1.8488453587352612e-08
+  },
+  "RollSum::wb": {
+   "n": 100,
+   "diff": 0.05200000000000001,
+   "lo": -0.05199999999999996,
+   "hi": 0.14800000000000005,
+   "t": 0.3109570260444592,
+   "w": 0.09497705898325559,
+   "p_holm": 0.3109570260444592
+  },
+  "Direct::sub": {
+   "n": 99,
+   "diff": -1.6836077910256333,
+   "lo": -2.2413115133155337,
+   "hi": -1.1264385662757503,
+   "t": 3.844805940385354e-08,
+   "w": 2.9402734768510635e-07,
+   "p_holm": 3.844805940385354e-08
+  },
+  "Direct::ins": {
+   "n": 99,
+   "diff": -2.927352074050271,
+   "lo": -3.9929679294711846,
+   "hi": -1.8892665051913287,
+   "t": 2.8307221338268386e-07,
+   "w": 2.1026057172026402e-06,
+   "p_holm": 2.8307221338268386e-07
+  },
+  "Direct::wb": {
+   "n": 99,
+   "diff": 0.29898989898989903,
+   "lo": 0.14949494949494946,
+   "hi": 0.44444444444444453,
+   "t": 0.00013218816558012997,
+   "w": 1.3015934176670058e-05,
+   "p_holm": 0.00026437633116025994
+  },
+  "StoryWriter::sub": {
+   "n": 98,
+   "diff": -2.8517157604605714,
+   "lo": -3.4402376000444295,
+   "hi": -2.2786470424729,
+   "t": 2.245364375435637e-15,
+   "w": 1.3866109072694928e-12,
+   "p_holm": 6.736093126306911e-15
+  },
+  "StoryWriter::ins": {
+   "n": 98,
+   "diff": -5.397447257303065,
+   "lo": -6.687960187589923,
+   "hi": -4.167823037996286,
+   "t": 7.812823153983991e-13,
+   "w": 2.046370489128638e-11,
+   "p_holm": 2.343846946195197e-12
+  },
+  "StoryWriter::wb": {
+   "n": 98,
+   "diff": 1.6387755102040815,
+   "lo": 1.4224489795918367,
+   "hi": 1.8693877551020408,
+   "t": 8.120678627011696e-26,
+   "w": 7.936875222705403e-17,
+   "p_holm": 2.4362035881035088e-25
+  }
+ },
+ "10k::GPT-5.6 Luna": {
+  "RollSum::sub": {
+   "n": 100,
+   "diff": 0.21385937286680445,
+   "lo": -0.2951506612481769,
+   "hi": 0.7036721702125849,
+   "t": 0.3999097653977393,
+   "w": 0.35500398960152846,
+   "p_holm": 0.48679727254744515
+  },
+  "RollSum::ins": {
+   "n": 100,
+   "diff": 0.1728012583332012,
+   "lo": -0.6887167678007005,
+   "hi": 1.0098226781128412,
+   "t": 0.6928386656301065,
+   "w": 0.5933316155482673,
+   "p_holm": 0.6928386656301065
+  },
+  "RollSum::wb": {
+   "n": 100,
+   "diff": 0.030000000000000016,
+   "lo": -0.04799999999999999,
+   "hi": 0.10600000000000007,
+   "t": 0.44377021515551135,
+   "w": 0.43376667428133564,
+   "p_holm": 0.8875404303110227
+  },
+  "Direct::sub": {
+   "n": 97,
+   "diff": -0.650990549932943,
+   "lo": -1.1791688960232762,
+   "hi": -0.13036976387863067,
+   "t": 0.01701226861948898,
+   "w": 0.03184533496491349,
+   "p_holm": 0.05103680585846694
+  },
+  "Direct::ins": {
+   "n": 97,
+   "diff": -1.2815213046254992,
+   "lo": -2.2097139374444015,
+   "hi": -0.33150629593973097,
+   "t": 0.008032536181096884,
+   "w": 0.009627482889683186,
+   "p_holm": 0.02409760854329065
+  },
+  "Direct::wb": {
+   "n": 97,
+   "diff": 0.030927835051546393,
+   "lo": -0.05360824742268025,
+   "hi": 0.11752577319587633,
+   "t": 0.47989185955790736,
+   "w": 0.6668120186040288,
+   "p_holm": 0.8875404303110227
+  },
+  "StoryWriter::sub": {
+   "n": 100,
+   "diff": -0.3108842750121955,
+   "lo": -0.8304816967857198,
+   "hi": 0.2030099000591667,
+   "t": 0.24339863627372257,
+   "w": 0.33395948157301447,
+   "p_holm": 0.48679727254744515
+  },
+  "StoryWriter::ins": {
+   "n": 100,
+   "diff": -0.8535406870836769,
+   "lo": -1.8919385011812793,
+   "hi": 0.11012718265686874,
+   "t": 0.1031299560071243,
+   "w": 0.2288162707681446,
+   "p_holm": 0.2062599120142486
+  },
+  "StoryWriter::wb": {
+   "n": 100,
+   "diff": 0.85,
+   "lo": 0.662,
+   "hi": 1.0619999999999998,
+   "t": 2.3021462397261894e-13,
+   "w": 3.037232439395754e-14,
+   "p_holm": 6.906438719178568e-13
+  }
+ },
+ "scaling::DeepSeek-V4-Flash": {
+  "10K::sub": {
+   "n": 100,
+   "diff": -1.4404724423108575,
+   "lo": -1.8619034443197109,
+   "hi": -1.0269867661639933,
+   "t": 1.0659188513798955e-09,
+   "w": 1.5490144071327087e-08,
+   "p_holm": 4.263675405519582e-09
+  },
+  "10K::ins": {
+   "n": 100,
+   "diff": -2.7792463992561833,
+   "lo": -3.653653318321061,
+   "hi": -1.9476604322440634,
+   "t": 9.244226793676306e-09,
+   "w": 6.89027241046785e-09,
+   "p_holm": 3.6976907174705225e-08
+  },
+  "10K::ins_local": {
+   "n": 100,
+   "diff": -2.4229564023154864,
+   "lo": -3.275970141406855,
+   "hi": -1.6078632597478622,
+   "t": 1.758509048071698e-07,
+   "w": 1.282935927699521e-07,
+   "p_holm": 7.034036192286792e-07
+  },
+  "10K::wb": {
+   "n": 100,
+   "diff": 0.05200000000000001,
+   "lo": -0.05199999999999996,
+   "hi": 0.14800000000000005,
+   "t": 0.3109570260444592,
+   "w": 0.09497705898325559,
+   "p_holm": 0.3109570260444592
+  },
+  "20K::sub": {
+   "n": 100,
+   "diff": -1.3781750145536906,
+   "lo": -1.8324690630075886,
+   "hi": -0.9383416287527316,
+   "t": 4.121937659936716e-08,
+   "w": 1.382838740155185e-07,
+   "p_holm": 1.2365812979810147e-07
+  },
+  "20K::ins": {
+   "n": 100,
+   "diff": -2.566893732520893,
+   "lo": -3.5199448834298828,
+   "hi": -1.6280511303159835,
+   "t": 7.869475037770097e-07,
+   "w": 1.4819472203436094e-06,
+   "p_holm": 2.360842511331029e-06
+  },
+  "20K::ins_local": {
+   "n": 100,
+   "diff": -2.3962885783555326,
+   "lo": -3.3096450842320877,
+   "hi": -1.4792280662671395,
+   "t": 1.5784934510806637e-06,
+   "w": 1.456647295738404e-06,
+   "p_holm": 4.735480353241991e-06
+  },
+  "20K::wb": {
+   "n": 100,
+   "diff": 0.15400000000000014,
+   "lo": 0.05400000000000001,
+   "hi": 0.2640000000000001,
+   "t": 0.0052912447070773356,
+   "w": 0.0015820990986322699,
+   "p_holm": 0.010659502012394443
+  },
+  "50K::sub": {
+   "n": 96,
+   "diff": -1.4293695537054025,
+   "lo": -1.9105127406559037,
+   "hi": -0.9605324723949145,
+   "t": 6.552845640798634e-08,
+   "w": 5.651777579523961e-07,
+   "p_holm": 1.3105691281597268e-07
+  },
+  "50K::ins": {
+   "n": 96,
+   "diff": -2.5941944836307154,
+   "lo": -3.583405174979459,
+   "hi": -1.614478190972214,
+   "t": 1.6450325978972062e-06,
+   "w": 7.850457419992413e-06,
+   "p_holm": 3.2900651957944124e-06
+  },
+  "50K::ins_local": {
+   "n": 96,
+   "diff": -2.151174723721559,
+   "lo": -3.1023178701147587,
+   "hi": -1.2191449975943007,
+   "t": 2.5740589367589513e-05,
+   "w": 5.9172273403436096e-05,
+   "p_holm": 2.9161032191553582e-05
+  },
+  "50K::wb": {
+   "n": 96,
+   "diff": 0.21458333333333338,
+   "lo": 0.13958333333333348,
+   "hi": 0.2916666666666666,
+   "t": 2.372846822812626e-07,
+   "w": 2.2038451198763213e-07,
+   "p_holm": 9.491387291250504e-07
+  },
+  "100K::sub": {
+   "n": 50,
+   "diff": -2.3806026623327536,
+   "lo": -3.2005734942741038,
+   "hi": -1.5943289803360947,
+   "t": 4.4441755292154645e-07,
+   "w": 5.215646012857178e-07,
+   "p_holm": 4.4441755292154645e-07
+  },
+  "100K::ins": {
+   "n": 50,
+   "diff": -4.580627195296644,
+   "lo": -6.365886865208924,
+   "hi": -2.8482167033246473,
+   "t": 4.686697838667272e-06,
+   "w": 2.2310435863204248e-06,
+   "p_holm": 4.686697838667272e-06
+  },
+  "100K::ins_local": {
+   "n": 50,
+   "diff": -4.249826088836345,
+   "lo": -6.0148992909161,
+   "hi": -2.5367198040635426,
+   "t": 1.4580516095776791e-05,
+   "w": 8.398093875428003e-06,
+   "p_holm": 2.9161032191553582e-05
+  },
+  "100K::wb": {
+   "n": 50,
+   "diff": 0.24,
+   "lo": 0.09200000000000007,
+   "hi": 0.3960000000000001,
+   "t": 0.003553167337464814,
+   "w": 0.004497664611986557,
+   "p_holm": 0.010659502012394443
+  }
+ },
+ "scaling::GPT-5.6 Luna": {
+  "10K::sub": {
+   "n": 100,
+   "diff": 0.21385937286680445,
+   "lo": -0.2951506612481769,
+   "hi": 0.7036721702125849,
+   "t": 0.3999097653977393,
+   "w": 0.35500398960152846,
+   "p_holm": 0.3999097653977393
+  },
+  "10K::ins": {
+   "n": 100,
+   "diff": 0.1728012583332012,
+   "lo": -0.6887167678007005,
+   "hi": 1.0098226781128412,
+   "t": 0.6928386656301065,
+   "w": 0.5933316155482673,
+   "p_holm": 0.6928386656301065
+  },
+  "10K::ins_local": {
+   "n": 100,
+   "diff": 0.009338643981679402,
+   "lo": -0.8450530213136865,
+   "hi": 0.8380627378856732,
+   "t": 0.9827509547598718,
+   "w": 0.8779466241767944,
+   "p_holm": 0.9827509547598718
+  },
+  "10K::wb": {
+   "n": 100,
+   "diff": 0.030000000000000016,
+   "lo": -0.04799999999999999,
+   "hi": 0.10600000000000007,
+   "t": 0.44377021515551135,
+   "w": 0.43376667428133564,
+   "p_holm": 0.8875404303110227
+  },
+  "20K::sub": {
+   "n": 100,
+   "diff": -0.8636787578658275,
+   "lo": -1.382375749306218,
+   "hi": -0.351723720707007,
+   "t": 0.0017541473597134636,
+   "w": 0.0030724215044493825,
+   "p_holm": 0.0070165894388538545
+  },
+  "20K::ins": {
+   "n": 100,
+   "diff": -1.2737163264419575,
+   "lo": -2.107577964730304,
+   "hi": -0.44371284382808823,
+   "t": 0.0038989350854983134,
+   "w": 0.004862747585576056,
+   "p_holm": 0.011509771175501138
+  },
+  "20K::ins_local": {
+   "n": 100,
+   "diff": -1.1365194109572827,
+   "lo": -1.9333685807791559,
+   "hi": -0.34231865646029236,
+   "t": 0.007594884493449832,
+   "w": 0.012552336622314263,
+   "p_holm": 0.019926476398652793
+  },
+  "20K::wb": {
+   "n": 100,
+   "diff": 0.049999999999999975,
+   "lo": -0.01400000000000019,
+   "hi": 0.11200000000000002,
+   "t": 0.12807962243868337,
+   "w": 0.1210848713806171,
+   "p_holm": 0.3842388673160501
+  },
+  "50K::sub": {
+   "n": 100,
+   "diff": -0.7422532064088095,
+   "lo": -1.2709726008607938,
+   "hi": -0.22290893359536118,
+   "t": 0.007626925480884736,
+   "w": 0.04726549096365713,
+   "p_holm": 0.02288077644265421
+  },
+  "50K::ins": {
+   "n": 100,
+   "diff": -1.4006076414713393,
+   "lo": -2.3372119446532884,
+   "hi": -0.4948563234819067,
+   "t": 0.0038365903918337126,
+   "w": 0.011498623474520207,
+   "p_holm": 0.011509771175501138
+  },
+  "50K::ins_local": {
+   "n": 100,
+   "diff": -1.2811045219889088,
+   "lo": -2.192739488283173,
+   "hi": -0.38207937177950924,
+   "t": 0.006642158799550931,
+   "w": 0.012431179130654632,
+   "p_holm": 0.019926476398652793
+  },
+  "50K::wb": {
+   "n": 100,
+   "diff": 0.01399999999999995,
+   "lo": -0.05400000000000013,
+   "hi": 0.08599999999999987,
+   "t": 0.6980816841746792,
+   "w": 0.7930496536011374,
+   "p_holm": 0.8875404303110227
+  },
+  "100K::sub": {
+   "n": 50,
+   "diff": -0.8772898777487349,
+   "lo": -1.6842383331897337,
+   "hi": -0.05514853407853141,
+   "t": 0.039551044496257105,
+   "w": 0.07556206690378708,
+   "p_holm": 0.07910208899251421
+  },
+  "100K::ins": {
+   "n": 50,
+   "diff": -2.151423742083567,
+   "lo": -3.4720451634939375,
+   "hi": -0.851581835769662,
+   "t": 0.002781266905971958,
+   "w": 0.004459422606641894,
+   "p_holm": 0.011125067623887833
+  },
+  "100K::ins_local": {
+   "n": 50,
+   "diff": -2.1164164827939604,
+   "lo": -3.425046594928834,
+   "hi": -0.8091034128213694,
+   "t": 0.0027500862760232916,
+   "w": 0.004316904154682888,
+   "p_holm": 0.011000345104093166
+  },
+  "100K::wb": {
+   "n": 50,
+   "diff": 0.18000000000000013,
+   "lo": 0.09600000000000014,
+   "hi": 0.25999999999999995,
+   "t": 6.708564031189174e-05,
+   "w": 8.78694472070113e-05,
+   "p_holm": 0.00026834256124756695
+  }
+ },
+ "subset::DeepSeek-V4-Flash": {
+  "10K::sub": {
+   "n": 50,
+   "diff": -1.2811047133938869,
+   "lo": -1.8793563973185032,
+   "hi": -0.7006756527399628,
+   "t": 0.0001153843271633804,
+   "w": 0.00017022784864551,
+   "p_holm": 0.0003461529814901412
+  },
+  "10K::ins": {
+   "n": 50,
+   "diff": -2.6034467756713555,
+   "lo": -3.8909601616722296,
+   "hi": -1.3244091775793887,
+   "t": 0.0002493841372464448,
+   "w": 5.639617199193481e-05,
+   "p_holm": 0.0007481524117393344
+  },
+  "10K::wb": {
+   "n": 50,
+   "diff": 0.064,
+   "lo": -0.03600000000000009,
+   "hi": 0.16399999999999998,
+   "t": 0.23144634977427903,
+   "w": 0.23842935267315113,
+   "p_holm": 0.46289269954855805
+  },
+  "20K::sub": {
+   "n": 50,
+   "diff": -1.324061745646353,
+   "lo": -1.9545600788022737,
+   "hi": -0.7164440288456874,
+   "t": 0.00017301412191169798,
+   "w": 0.0002409992117797799,
+   "p_holm": 0.0003461529814901412
+  },
+  "20K::ins": {
+   "n": 50,
+   "diff": -2.4834419980822475,
+   "lo": -3.7383398087415247,
+   "hi": -1.2370717983803763,
+   "t": 0.00038650305059398284,
+   "w": 0.0005734773907004609,
+   "p_holm": 0.0007730061011879657
+  },
+  "20K::wb": {
+   "n": 50,
+   "diff": 0.04000000000000009,
+   "lo": -0.08799999999999981,
+   "hi": 0.1640000000000002,
+   "t": 0.5481632602441133,
+   "w": 0.40170574132514936,
+   "p_holm": 0.5481632602441133
+  },
+  "50K::sub": {
+   "n": 49,
+   "diff": -1.1632775188635522,
+   "lo": -1.7969174772597352,
+   "hi": -0.5296925139350969,
+   "t": 0.0008729980808162282,
+   "w": 0.00144806584463808,
+   "p_holm": 0.0008729980808162282
+  },
+  "50K::ins": {
+   "n": 49,
+   "diff": -2.7596807903384213,
+   "lo": -4.132688016554383,
+   "hi": -1.367166356074057,
+   "t": 0.0004212271024172182,
+   "w": 0.0007784693199610615,
+   "p_holm": 0.0007730061011879657
+  },
+  "50K::wb": {
+   "n": 49,
+   "diff": 0.12653061224489803,
+   "lo": 0.020408163265306378,
+   "hi": 0.23673469387755097,
+   "t": 0.028837242314633384,
+   "w": 0.013070294285994708,
+   "p_holm": 0.08651172694390015
+  },
+  "100K::sub": {
+   "n": 50,
+   "diff": -2.3806026623327536,
+   "lo": -3.2005734942741038,
+   "hi": -1.5943289803360947,
+   "t": 4.4441755292154645e-07,
+   "w": 5.215646012857178e-07,
+   "p_holm": 1.7776702116861858e-06
+  },
+  "100K::ins": {
+   "n": 50,
+   "diff": -4.580627195296644,
+   "lo": -6.365886865208924,
+   "hi": -2.8482167033246473,
+   "t": 4.686697838667272e-06,
+   "w": 2.2310435863204248e-06,
+   "p_holm": 1.8746791354669087e-05
+  },
+  "100K::wb": {
+   "n": 50,
+   "diff": 0.24,
+   "lo": 0.09200000000000007,
+   "hi": 0.3960000000000001,
+   "t": 0.003553167337464814,
+   "w": 0.004497664611986557,
+   "p_holm": 0.014212669349859257
+  }
+ },
+ "subset::GPT-5.6 Luna": {
+  "10K::sub": {
+   "n": 50,
+   "diff": 0.594681141451917,
+   "lo": -0.1345620511221303,
+   "hi": 1.2625930425035428,
+   "t": 0.09871598290690493,
+   "w": 0.052989788310034314,
+   "p_holm": 0.09871598290690493
+  },
+  "10K::ins": {
+   "n": 50,
+   "diff": 0.476125899713768,
+   "lo": -0.7489625309816519,
+   "hi": 1.6479560249025262,
+   "t": 0.43637067904654414,
+   "w": 0.3724861917482851,
+   "p_holm": 0.43637067904654414
+  },
+  "10K::wb": {
+   "n": 50,
+   "diff": 0.019999999999999966,
+   "lo": -0.09199999999999996,
+   "hi": 0.1319999999999999,
+   "t": 0.7268545365433154,
+   "w": 0.8701863019604833,
+   "p_holm": 1.0
+  },
+  "20K::sub": {
+   "n": 50,
+   "diff": -0.9126941481127036,
+   "lo": -1.637761058343373,
+   "hi": -0.16545050759475138,
+   "t": 0.020458803306931107,
+   "w": 0.02616696817119646,
+   "p_holm": 0.06137640992079332
+  },
+  "20K::ins": {
+   "n": 50,
+   "diff": -1.2942019848690542,
+   "lo": -2.4789473074837316,
+   "hi": -0.12017067424424972,
+   "t": 0.04090747406257276,
+   "w": 0.05935623218713815,
+   "p_holm": 0.08181494812514552
+  },
+  "20K::wb": {
+   "n": 50,
+   "diff": 0.08000000000000006,
+   "lo": -0.016000000000000264,
+   "hi": 0.1800000000000001,
+   "t": 0.1239609066401992,
+   "w": 0.08917148032503903,
+   "p_holm": 0.37188271992059757
+  },
+  "50K::sub": {
+   "n": 50,
+   "diff": -1.2299787630199481,
+   "lo": -1.9942961374983759,
+   "hi": -0.4888267111913682,
+   "t": 0.002081597977807266,
+   "w": 0.007609452352863144,
+   "p_holm": 0.008326391911229063
+  },
+  "50K::ins": {
+   "n": 50,
+   "diff": -2.029946680143526,
+   "lo": -3.2629907531610858,
+   "hi": -0.8281738811834424,
+   "t": 0.001996194167133095,
+   "w": 0.004757046552823496,
+   "p_holm": 0.00798477666853238
+  },
+  "50K::wb": {
+   "n": 50,
+   "diff": 0.011999999999999886,
+   "lo": -0.08000000000000007,
+   "hi": 0.10399999999999988,
+   "t": 0.8020470245075091,
+   "w": 0.8376583058775489,
+   "p_holm": 1.0
+  },
+  "100K::sub": {
+   "n": 50,
+   "diff": -0.8772898777487349,
+   "lo": -1.6842383331897337,
+   "hi": -0.05514853407853141,
+   "t": 0.039551044496257105,
+   "w": 0.07556206690378708,
+   "p_holm": 0.07910208899251421
+  },
+  "100K::ins": {
+   "n": 50,
+   "diff": -2.151423742083567,
+   "lo": -3.4720451634939375,
+   "hi": -0.851581835769662,
+   "t": 0.002781266905971958,
+   "w": 0.004459422606641894,
+   "p_holm": 0.008343800717915874
+  },
+  "100K::wb": {
+   "n": 50,
+   "diff": 0.18000000000000013,
+   "lo": 0.09600000000000014,
+   "hi": 0.25999999999999995,
+   "t": 6.708564031189174e-05,
+   "w": 8.78694472070113e-05,
+   "p_holm": 0.00026834256124756695
+  }
+ },
+ "ablation": {
+  "-State::sub": {
+   "n": 100,
+   "diff": 0.519952210148642,
+   "lo": 0.10286153005960695,
+   "hi": 0.9408157348154483,
+   "t": 0.01654391660486522,
+   "w": 0.031638123676933194,
+   "p_holm": 0.01654391660486522
+  },
+  "-State::ins": {
+   "n": 100,
+   "diff": 1.0496817041954665,
+   "lo": 0.16180658413463736,
+   "hi": 1.9498176266168523,
+   "t": 0.024313790183976256,
+   "w": 0.052895032886786486,
+   "p_holm": 0.024313790183976256
+  },
+  "-State::wb": {
+   "n": 100,
+   "diff": -0.09400000000000006,
+   "lo": -0.17000000000000018,
+   "hi": -0.018000000000000006,
+   "t": 0.0184491737193575,
+   "w": 0.011589568026119065,
+   "p_holm": 0.0184491737193575
+  },
+  "-Lookback::sub": {
+   "n": 100,
+   "diff": 1.195102837315773,
+   "lo": 0.7353380112832392,
+   "hi": 1.6548527386894856,
+   "t": 2.256653658756737e-06,
+   "w": 2.874910625498527e-06,
+   "p_holm": 4.513307317513474e-06
+  },
+  "-Lookback::ins": {
+   "n": 100,
+   "diff": 1.4358934223819038,
+   "lo": 0.6142840685263493,
+   "hi": 2.22520129400591,
+   "t": 0.0009554990280146773,
+   "w": 0.00042463052041503036,
+   "p_holm": 0.0019109980560293547
+  },
+  "-Lookback::wb": {
+   "n": 100,
+   "diff": -0.16000000000000011,
+   "lo": -0.23400000000000007,
+   "hi": -0.08800000000000012,
+   "t": 3.580033987967828e-05,
+   "w": 2.5435593389459137e-05,
+   "p_holm": 0.00010740101963903483
+  },
+  "-FutureReqs::sub": null,
+  "-FutureReqs::ins": null,
+  "-FutureReqs::wb": null,
+  "RollSum (last 8)::sub": {
+   "n": 100,
+   "diff": 1.3781750145536906,
+   "lo": 0.9383416287527316,
+   "hi": 1.8324690630075886,
+   "t": 4.121937659936716e-08,
+   "w": 1.382838740155185e-07,
+   "p_holm": 1.2365812979810147e-07
+  },
+  "RollSum (last 8)::ins": {
+   "n": 100,
+   "diff": 2.566893732520893,
+   "lo": 1.6280511303159835,
+   "hi": 3.5199448834298828,
+   "t": 7.869475037770097e-07,
+   "w": 1.4819472203436094e-06,
+   "p_holm": 2.360842511331029e-06
+  },
+  "RollSum (last 8)::wb": {
+   "n": 100,
+   "diff": -0.15400000000000014,
+   "lo": -0.2640000000000001,
+   "hi": -0.05400000000000001,
+   "t": 0.0052912447070773356,
+   "w": 0.0015820990986322699,
+   "p_holm": 0.010582489414154671
+  }
+ },
+ "by_type": {
+  "10k::DeepSeek-V4-Flash": {
+   "Direct": {
+    "categories": {
+     "characterization": 1.3046266682716723,
+     "factual_detail": 2.7567328316773705,
+     "narrative_style": 0.42194605149758657,
+     "timeline_plot": 3.298358775996447,
+     "world_building": 1.5109369744566779
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 1.0981195778578308,
+     "characterization_knowledge_contradictions": 0.08550702162250089,
+     "characterization_skill_power_fluctuations": 0.12100006879134041,
+     "characterization_forgotten_abilities": 0.0,
+     "factual_detail_appearance_mismatches": 0.7284353018420807,
+     "factual_detail_nomenclature_confusions": 0.47215880373099367,
+     "factual_detail_quantitative_mismatches": 1.556138726104296,
+     "narrative_style_perspective_confusions": 0.1321794581262437,
+     "narrative_style_tone_inconsistencies": 0.03957051281630718,
+     "narrative_style_style_shifts": 0.2501960805550357,
+     "timeline_plot_absolute_time_contradictions": 0.313747968648112,
+     "timeline_plot_duration_timeline_contradictions": 0.9864436468216099,
+     "timeline_plot_simultaneity_contradictions": 0.22679955568816,
+     "timeline_plot_causeless_effects": 0.2606053139356379,
+     "timeline_plot_causal_logic_violations": 0.8815309633971928,
+     "timeline_plot_abandoned_plot_elements": 0.6292313275057346,
+     "world_building_core_rules_violations": 1.0097533005022712,
+     "world_building_social_norms_violations": 0.18747931815339985,
+     "world_building_geographical_contradictions": 0.31370435580100703
+    },
+    "n": 99
+   },
+   "DOME (20)": {
+    "categories": {
+     "characterization": 2.583999434565099,
+     "factual_detail": 3.713333211873124,
+     "narrative_style": 2.0788926384253013,
+     "timeline_plot": 6.101469077807766,
+     "world_building": 2.2868231001587676
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 2.1747324692416186,
+     "characterization_knowledge_contradictions": 0.10175514555328927,
+     "characterization_skill_power_fluctuations": 0.30751181977019093,
+     "characterization_forgotten_abilities": 0.0,
+     "factual_detail_appearance_mismatches": 1.1193665860808821,
+     "factual_detail_nomenclature_confusions": 1.5747735669079739,
+     "factual_detail_quantitative_mismatches": 1.019193058884268,
+     "narrative_style_perspective_confusions": 0.3541618971242361,
+     "narrative_style_tone_inconsistencies": 0.05143503754757741,
+     "narrative_style_style_shifts": 1.6732957037534877,
+     "timeline_plot_absolute_time_contradictions": 0.25468210392834634,
+     "timeline_plot_duration_timeline_contradictions": 1.0171700211007273,
+     "timeline_plot_simultaneity_contradictions": 0.30710386598193506,
+     "timeline_plot_causeless_effects": 0.45840611987490565,
+     "timeline_plot_causal_logic_violations": 2.0809680370338315,
+     "timeline_plot_abandoned_plot_elements": 1.9831389298880204,
+     "world_building_core_rules_violations": 1.221918541536628,
+     "world_building_social_norms_violations": 0.35430007704793126,
+     "world_building_geographical_contradictions": 0.7106044815742083
+    },
+    "n": 20
+   },
+   "StoryWriter": {
+    "categories": {
+     "characterization": 1.2989975570142844,
+     "factual_detail": 2.933044911330377,
+     "narrative_style": 1.2941776351936007,
+     "timeline_plot": 4.535572131937914,
+     "world_building": 1.7416264634142258
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 1.0535306795923103,
+     "characterization_knowledge_contradictions": 0.12596851938268,
+     "characterization_skill_power_fluctuations": 0.1065817990106194,
+     "characterization_forgotten_abilities": 0.012916559028674762,
+     "factual_detail_appearance_mismatches": 0.998483272484295,
+     "factual_detail_nomenclature_confusions": 0.6432058151033314,
+     "factual_detail_quantitative_mismatches": 1.2913558237427503,
+     "narrative_style_perspective_confusions": 0.18333826564292316,
+     "narrative_style_tone_inconsistencies": 0.06349234663390134,
+     "narrative_style_style_shifts": 1.0473470229167763,
+     "timeline_plot_absolute_time_contradictions": 0.24304851472471128,
+     "timeline_plot_duration_timeline_contradictions": 0.7691712262614796,
+     "timeline_plot_simultaneity_contradictions": 0.28370502006967613,
+     "timeline_plot_causeless_effects": 0.5940466136930164,
+     "timeline_plot_causal_logic_violations": 1.2620525003401428,
+     "timeline_plot_abandoned_plot_elements": 1.3835482568488877,
+     "world_building_core_rules_violations": 1.0711018994091732,
+     "world_building_social_norms_violations": 0.22900493482143744,
+     "world_building_geographical_contradictions": 0.4415196291836151
+    },
+    "n": 98
+   },
+   "RollSum": {
+    "categories": {
+     "characterization": 1.3321383611792146,
+     "factual_detail": 2.847104441073311,
+     "narrative_style": 0.5190160895863789,
+     "timeline_plot": 2.979588068045962,
+     "world_building": 1.4933957410243883
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 1.184562656822414,
+     "characterization_knowledge_contradictions": 0.08834797636416165,
+     "characterization_skill_power_fluctuations": 0.05922772799263894,
+     "characterization_forgotten_abilities": 0.0,
+     "factual_detail_appearance_mismatches": 0.8939318233869561,
+     "factual_detail_nomenclature_confusions": 0.3941169315012115,
+     "factual_detail_quantitative_mismatches": 1.5590556861851435,
+     "narrative_style_perspective_confusions": 0.12594471020973924,
+     "narrative_style_tone_inconsistencies": 0.009679605072113058,
+     "narrative_style_style_shifts": 0.3833917743045266,
+     "timeline_plot_absolute_time_contradictions": 0.24865503289407898,
+     "timeline_plot_duration_timeline_contradictions": 0.9106695178524444,
+     "timeline_plot_simultaneity_contradictions": 0.22850197444585255,
+     "timeline_plot_causeless_effects": 0.20245431564534713,
+     "timeline_plot_causal_logic_violations": 0.7058385383913631,
+     "timeline_plot_abandoned_plot_elements": 0.6834686888168757,
+     "world_building_core_rules_violations": 0.9013974514104928,
+     "world_building_social_norms_violations": 0.17749444892573207,
+     "world_building_geographical_contradictions": 0.41450384068816354
+    },
+    "n": 100
+   },
+   "NstAgent": {
+    "categories": {
+     "characterization": 0.7501602093183531,
+     "factual_detail": 2.1553329395881753,
+     "narrative_style": 0.07907309450925984,
+     "timeline_plot": 2.102960557660611,
+     "world_building": 1.304469500576672
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 0.6350385602084967,
+     "characterization_knowledge_contradictions": 0.061140482940293256,
+     "characterization_skill_power_fluctuations": 0.045182996188919085,
+     "characterization_forgotten_abilities": 0.008798169980644026,
+     "factual_detail_appearance_mismatches": 0.6162561625781261,
+     "factual_detail_nomenclature_confusions": 0.284032466416826,
+     "factual_detail_quantitative_mismatches": 1.2550443105932232,
+     "narrative_style_perspective_confusions": 0.026132744601185757,
+     "narrative_style_tone_inconsistencies": 0.009138261902586127,
+     "narrative_style_style_shifts": 0.043802088005487946,
+     "timeline_plot_absolute_time_contradictions": 0.2125360049683785,
+     "timeline_plot_duration_timeline_contradictions": 0.7069663273633189,
+     "timeline_plot_simultaneity_contradictions": 0.11541699265671385,
+     "timeline_plot_causeless_effects": 0.21553172656857256,
+     "timeline_plot_causal_logic_violations": 0.5253308142274488,
+     "timeline_plot_abandoned_plot_elements": 0.3271786918761785,
+     "world_building_core_rules_violations": 0.8330789874425634,
+     "world_building_social_norms_violations": 0.17788568966659157,
+     "world_building_geographical_contradictions": 0.29350482346751716
+    },
+    "n": 100
+   }
+  },
+  "10k::GPT-5.6 Luna": {
+   "Direct": {
+    "categories": {
+     "characterization": 0.9165121602615023,
+     "factual_detail": 2.517698211991866,
+     "narrative_style": 0.030610317886075444,
+     "timeline_plot": 3.1042628148228406,
+     "world_building": 1.3919862000086531
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 0.82060484424058,
+     "characterization_knowledge_contradictions": 0.009945281063588137,
+     "characterization_skill_power_fluctuations": 0.08596203495733411,
+     "characterization_forgotten_abilities": 0.0,
+     "factual_detail_appearance_mismatches": 0.5695294416002998,
+     "factual_detail_nomenclature_confusions": 0.3995504374520658,
+     "factual_detail_quantitative_mismatches": 1.5486183329395005,
+     "narrative_style_perspective_confusions": 0.009262604088513446,
+     "narrative_style_tone_inconsistencies": 0.0,
+     "narrative_style_style_shifts": 0.021347713797561996,
+     "timeline_plot_absolute_time_contradictions": 0.28495143707516934,
+     "timeline_plot_duration_timeline_contradictions": 0.8872193635516685,
+     "timeline_plot_simultaneity_contradictions": 0.30678510871019193,
+     "timeline_plot_causeless_effects": 0.26183576181467794,
+     "timeline_plot_causal_logic_violations": 0.6569599271794276,
+     "timeline_plot_abandoned_plot_elements": 0.7065112164917053,
+     "world_building_core_rules_violations": 0.8973449306295188,
+     "world_building_social_norms_violations": 0.16696841894240325,
+     "world_building_geographical_contradictions": 0.32767285043673106
+    },
+    "n": 97
+   },
+   "DOME (20)": {
+    "categories": {
+     "characterization": 1.8045231597222156,
+     "factual_detail": 3.1048525647000904,
+     "narrative_style": 1.2502873645032266,
+     "timeline_plot": 4.10429018651002,
+     "world_building": 1.155123163677303
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 1.6545479384531219,
+     "characterization_knowledge_contradictions": 0.05054589567327132,
+     "characterization_skill_power_fluctuations": 0.09942932559582214,
+     "characterization_forgotten_abilities": 0.0,
+     "factual_detail_appearance_mismatches": 0.950575527114937,
+     "factual_detail_nomenclature_confusions": 1.2030221169529622,
+     "factual_detail_quantitative_mismatches": 0.9512549206321912,
+     "narrative_style_perspective_confusions": 0.50023801202462,
+     "narrative_style_tone_inconsistencies": 0.0,
+     "narrative_style_style_shifts": 0.7500493524786067,
+     "timeline_plot_absolute_time_contradictions": 0.2506667778971166,
+     "timeline_plot_duration_timeline_contradictions": 0.8510709007723707,
+     "timeline_plot_simultaneity_contradictions": 0.3497757320740421,
+     "timeline_plot_causeless_effects": 0.29839866427194167,
+     "timeline_plot_causal_logic_violations": 1.2024846527317334,
+     "timeline_plot_abandoned_plot_elements": 1.1518934587628153,
+     "world_building_core_rules_violations": 0.451053621303497,
+     "world_building_social_norms_violations": 0.3527426051925846,
+     "world_building_geographical_contradictions": 0.35132693718122143
+    },
+    "n": 20
+   },
+   "StoryWriter": {
+    "categories": {
+     "characterization": 0.7888393849991554,
+     "factual_detail": 2.2602978055210916,
+     "narrative_style": 0.5578562650837152,
+     "timeline_plot": 2.9952267451184413,
+     "world_building": 1.076872318484086
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 0.658022279288989,
+     "characterization_knowledge_contradictions": 0.01148105625717566,
+     "characterization_skill_power_fluctuations": 0.11933604945299071,
+     "characterization_forgotten_abilities": 0.0,
+     "factual_detail_appearance_mismatches": 0.9675690367876392,
+     "factual_detail_nomenclature_confusions": 0.5884626139491153,
+     "factual_detail_quantitative_mismatches": 0.7042661547843373,
+     "narrative_style_perspective_confusions": 0.059527276652228414,
+     "narrative_style_tone_inconsistencies": 0.009439305267132339,
+     "narrative_style_style_shifts": 0.48888968316435444,
+     "timeline_plot_absolute_time_contradictions": 0.16715717914928224,
+     "timeline_plot_duration_timeline_contradictions": 0.46532295761130327,
+     "timeline_plot_simultaneity_contradictions": 0.22967773913632986,
+     "timeline_plot_causeless_effects": 0.30877239085444624,
+     "timeline_plot_causal_logic_violations": 0.7311137112518722,
+     "timeline_plot_abandoned_plot_elements": 1.0931827671152077,
+     "world_building_core_rules_violations": 0.6161298221079294,
+     "world_building_social_norms_violations": 0.2261913884494627,
+     "world_building_geographical_contradictions": 0.23455110792669387
+    },
+    "n": 100
+   },
+   "RollSum": {
+    "categories": {
+     "characterization": 0.6384320580366172,
+     "factual_detail": 2.3416726857908987,
+     "narrative_style": 0.1798760475236821,
+     "timeline_plot": 2.5188987529061437,
+     "world_building": 0.9738710295322696
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 0.5341919429862314,
+     "characterization_knowledge_contradictions": 0.029037904690561,
+     "characterization_skill_power_fluctuations": 0.07520221035982477,
+     "characterization_forgotten_abilities": 0.0,
+     "factual_detail_appearance_mismatches": 0.9267735120849605,
+     "factual_detail_nomenclature_confusions": 0.4248453338697823,
+     "factual_detail_quantitative_mismatches": 0.9900538398361562,
+     "narrative_style_perspective_confusions": 0.009004952723998198,
+     "narrative_style_tone_inconsistencies": 0.0,
+     "narrative_style_style_shifts": 0.1708710947996839,
+     "timeline_plot_absolute_time_contradictions": 0.1952759149584773,
+     "timeline_plot_duration_timeline_contradictions": 0.5292856569850257,
+     "timeline_plot_simultaneity_contradictions": 0.13197672612222078,
+     "timeline_plot_causeless_effects": 0.3265237545070314,
+     "timeline_plot_causal_logic_violations": 0.47754571292150233,
+     "timeline_plot_abandoned_plot_elements": 0.8582909874118863,
+     "world_building_core_rules_violations": 0.6252061016284705,
+     "world_building_social_norms_violations": 0.12695477947217482,
+     "world_building_geographical_contradictions": 0.2217101484316242
+    },
+    "n": 100
+   },
+   "NstAgent": {
+    "categories": {
+     "characterization": 0.7561361803037552,
+     "factual_detail": 2.1090329146330986,
+     "narrative_style": 0.25775544747757384,
+     "timeline_plot": 2.672113803240256,
+     "world_building": 1.0305134864681293
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 0.6841277133550285,
+     "characterization_knowledge_contradictions": 0.0,
+     "characterization_skill_power_fluctuations": 0.0720084669487267,
+     "characterization_forgotten_abilities": 0.0,
+     "factual_detail_appearance_mismatches": 0.6931017381637219,
+     "factual_detail_nomenclature_confusions": 0.5933715706060274,
+     "factual_detail_quantitative_mismatches": 0.8225596058633496,
+     "narrative_style_perspective_confusions": 0.0828871559574939,
+     "narrative_style_tone_inconsistencies": 0.0091066387396412,
+     "narrative_style_style_shifts": 0.16576165278043875,
+     "timeline_plot_absolute_time_contradictions": 0.23794715421762955,
+     "timeline_plot_duration_timeline_contradictions": 0.438497419841502,
+     "timeline_plot_simultaneity_contradictions": 0.15515382290841034,
+     "timeline_plot_causeless_effects": 0.3283531905778863,
+     "timeline_plot_causal_logic_violations": 0.49040861393141916,
+     "timeline_plot_abandoned_plot_elements": 1.0217536017634083,
+     "world_building_core_rules_violations": 0.6200589300218616,
+     "world_building_social_norms_violations": 0.21049652798780535,
+     "world_building_geographical_contradictions": 0.19995802845846242
+    },
+    "n": 100
+   }
+  },
+  "scaling::DeepSeek-V4-Flash": {
+   "20K": {
+    "NstAgent": {
+     "categories": {
+      "characterization": 1.254907509045694,
+      "factual_detail": 2.510957243222843,
+      "narrative_style": 0.30515710996395634,
+      "timeline_plot": 2.6894232068467,
+      "world_building": 1.5899465588429036
+     },
+     "subtypes": {
+      "characterization_memory_contradictions": 1.066414366364704,
+      "characterization_knowledge_contradictions": 0.05632665709577182,
+      "characterization_skill_power_fluctuations": 0.1121851319222813,
+      "characterization_forgotten_abilities": 0.01998135366293658,
+      "factual_detail_appearance_mismatches": 0.7162778339265701,
+      "factual_detail_nomenclature_confusions": 0.21937185967191966,
+      "factual_detail_quantitative_mismatches": 1.5753075496243536,
+      "narrative_style_perspective_confusions": 0.06902793157272576,
+      "narrative_style_tone_inconsistencies": 0.018517839372004095,
+      "narrative_style_style_shifts": 0.21761133901922652,
+      "timeline_plot_absolute_time_contradictions": 0.2576701455813845,
+      "timeline_plot_duration_timeline_contradictions": 0.9438374604975437,
+      "timeline_plot_simultaneity_contradictions": 0.16298437885788716,
+      "timeline_plot_causeless_effects": 0.1427309734422375,
+      "timeline_plot_causal_logic_violations": 0.6495122273064414,
+      "timeline_plot_abandoned_plot_elements": 0.532688021161206,
+      "world_building_core_rules_violations": 1.028517152131706,
+      "world_building_social_norms_violations": 0.1534212899204762,
+      "world_building_geographical_contradictions": 0.4080081167907214
+     }
+    },
+    "RollSum": {
+     "categories": {
+      "characterization": 1.7940395388655157,
+      "factual_detail": 3.2330671445817902,
+      "narrative_style": 0.8630750924289998,
+      "timeline_plot": 3.1475201054587347,
+      "world_building": 1.8795834791079498
+     },
+     "subtypes": {
+      "characterization_memory_contradictions": 1.6183333223344405,
+      "characterization_knowledge_contradictions": 0.09160133885026105,
+      "characterization_skill_power_fluctuations": 0.07515873346896938,
+      "characterization_forgotten_abilities": 0.008946144211844694,
+      "factual_detail_appearance_mismatches": 1.0752574237118042,
+      "factual_detail_nomenclature_confusions": 0.47630818139382525,
+      "factual_detail_quantitative_mismatches": 1.6815015394761608,
+      "narrative_style_perspective_confusions": 0.3130259901133594,
+      "narrative_style_tone_inconsistencies": 0.04851049149732372,
+      "narrative_style_style_shifts": 0.5015386108183167,
+      "timeline_plot_absolute_time_contradictions": 0.26344576840189093,
+      "timeline_plot_duration_timeline_contradictions": 0.9855943299440355,
+      "timeline_plot_simultaneity_contradictions": 0.17768271423494394,
+      "timeline_plot_causeless_effects": 0.22435733140667327,
+      "timeline_plot_causal_logic_violations": 0.793146786144625,
+      "timeline_plot_abandoned_plot_elements": 0.703293175326566,
+      "world_building_core_rules_violations": 1.0337997212621999,
+      "world_building_social_norms_violations": 0.24067004411290868,
+      "world_building_geographical_contradictions": 0.6051137137328411
+     }
+    }
+   },
+   "50K": {
+    "NstAgent": {
+     "categories": {
+      "characterization": 1.4087036666243136,
+      "factual_detail": 2.7426073921088063,
+      "narrative_style": 0.25940738746119524,
+      "timeline_plot": 2.9257795884075097,
+      "world_building": 1.569573412677336
+     },
+     "subtypes": {
+      "characterization_memory_contradictions": 1.2940908114746892,
+      "characterization_knowledge_contradictions": 0.05747500359878241,
+      "characterization_skill_power_fluctuations": 0.057137851550841806,
+      "characterization_forgotten_abilities": 0.0,
+      "factual_detail_appearance_mismatches": 0.6547509983457003,
+      "factual_detail_nomenclature_confusions": 0.3519482213287809,
+      "factual_detail_quantitative_mismatches": 1.735908172434325,
+      "narrative_style_perspective_confusions": 0.06435714380132579,
+      "narrative_style_tone_inconsistencies": 0.0,
+      "narrative_style_style_shifts": 0.19505024365986942,
+      "timeline_plot_absolute_time_contradictions": 0.3078734405880186,
+      "timeline_plot_duration_timeline_contradictions": 0.9010134694012956,
+      "timeline_plot_simultaneity_contradictions": 0.22231631348378625,
+      "timeline_plot_causeless_effects": 0.159502266106935,
+      "timeline_plot_causal_logic_violations": 0.5687849519927615,
+      "timeline_plot_abandoned_plot_elements": 0.766289146834713,
+      "world_building_core_rules_violations": 0.9061164763192521,
+      "world_building_social_norms_violations": 0.16676559256292034,
+      "world_building_geographical_contradictions": 0.49669134379516355
+     }
+    },
+    "RollSum": {
+     "categories": {
+      "characterization": 2.163200876216997,
+      "factual_detail": 3.3558140594444663,
+      "narrative_style": 0.5268569144354455,
+      "timeline_plot": 3.618627272366998,
+      "world_building": 1.7931774519022314
+     },
+     "subtypes": {
+      "characterization_memory_contradictions": 2.014357926777648,
+      "characterization_knowledge_contradictions": 0.05215845058347698,
+      "characterization_skill_power_fluctuations": 0.08546568715240803,
+      "characterization_forgotten_abilities": 0.01121881170346437,
+      "factual_detail_appearance_mismatches": 1.1358302053788665,
+      "factual_detail_nomenclature_confusions": 0.671487396825436,
+      "factual_detail_quantitative_mismatches": 1.548496457240164,
+      "narrative_style_perspective_confusions": 0.11357945498119552,
+      "narrative_style_tone_inconsistencies": 0.042048246896951635,
+      "narrative_style_style_shifts": 0.3712292125572983,
+      "timeline_plot_absolute_time_contradictions": 0.3325106675259441,
+      "timeline_plot_duration_timeline_contradictions": 0.8593663232216594,
+      "timeline_plot_simultaneity_contradictions": 0.23927535846608436,
+      "timeline_plot_causeless_effects": 0.28169709988013175,
+      "timeline_plot_causal_logic_violations": 0.6946093806630046,
+      "timeline_plot_abandoned_plot_elements": 1.2111684426101734,
+      "world_building_core_rules_violations": 0.8555189258645591,
+      "world_building_social_norms_violations": 0.19870711518252793,
+      "world_building_geographical_contradictions": 0.7389514108551444
+     }
+    }
+   },
+   "100K": {
+    "NstAgent": {
+     "categories": {
+      "characterization": 1.1902065284267784,
+      "factual_detail": 2.2201013633086175,
+      "narrative_style": 0.2518218432858057,
+      "timeline_plot": 2.41736652108759,
+      "world_building": 1.1595061459660212
+     },
+     "subtypes": {
+      "characterization_memory_contradictions": 1.0545060922800826,
+      "characterization_knowledge_contradictions": 0.07671141127500715,
+      "characterization_skill_power_fluctuations": 0.05898902487168864,
+      "characterization_forgotten_abilities": 0.0,
+      "factual_detail_appearance_mismatches": 0.6461126256130292,
+      "factual_detail_nomenclature_confusions": 0.19443598674663165,
+      "factual_detail_quantitative_mismatches": 1.3795527509489565,
+      "narrative_style_perspective_confusions": 0.020796506186960592,
+      "narrative_style_tone_inconsistencies": 0.0,
+      "narrative_style_style_shifts": 0.23102533709884512,
+      "timeline_plot_absolute_time_contradictions": 0.2054649643879692,
+      "timeline_plot_duration_timeline_contradictions": 0.9287828264023154,
+      "timeline_plot_simultaneity_contradictions": 0.09316882767986226,
+      "timeline_plot_causeless_effects": 0.01763046544428773,
+      "timeline_plot_causal_logic_violations": 0.31988660183065354,
+      "timeline_plot_abandoned_plot_elements": 0.8524328353425017,
+      "world_building_core_rules_violations": 0.5584947885997129,
+      "world_building_social_norms_violations": 0.01866019779809666,
+      "world_building_geographical_contradictions": 0.5823511595682116
+     }
+    },
+    "RollSum": {
+     "categories": {
+      "characterization": 2.1172722015635284,
+      "factual_detail": 3.801126080361575,
+      "narrative_style": 0.7370154473760241,
+      "timeline_plot": 3.552308635269151,
+      "world_building": 1.6119072328011774
+     },
+     "subtypes": {
+      "characterization_memory_contradictions": 2.094283695816402,
+      "characterization_knowledge_contradictions": 0.022988505747126436,
+      "characterization_skill_power_fluctuations": 0.0,
+      "characterization_forgotten_abilities": 0.0,
+      "factual_detail_appearance_mismatches": 1.3236816857869147,
+      "factual_detail_nomenclature_confusions": 0.7540907964868501,
+      "factual_detail_quantitative_mismatches": 1.7233535980878103,
+      "narrative_style_perspective_confusions": 0.1452073311187422,
+      "narrative_style_tone_inconsistencies": 0.06109116811399835,
+      "narrative_style_style_shifts": 0.5307169481432835,
+      "timeline_plot_absolute_time_contradictions": 0.33691779441952796,
+      "timeline_plot_duration_timeline_contradictions": 1.0831762678061296,
+      "timeline_plot_simultaneity_contradictions": 0.236503255925258,
+      "timeline_plot_causeless_effects": 0.0642649590515693,
+      "timeline_plot_causal_logic_violations": 0.6482124162638655,
+      "timeline_plot_abandoned_plot_elements": 1.1832339418028008,
+      "world_building_core_rules_violations": 0.6707625453357962,
+      "world_building_social_norms_violations": 0.3643309364005381,
+      "world_building_geographical_contradictions": 0.576813751064843
+     }
+    }
+   }
+  },
+  "scaling::GPT-5.6 Luna": {
+   "20K": {
+    "NstAgent": {
+     "categories": {
+      "characterization": 1.0739790360739567,
+      "factual_detail": 2.557844085642631,
+      "narrative_style": 0.1427793824634777,
+      "timeline_plot": 2.6711496164236492,
+      "world_building": 1.2526940486761102
+     },
+     "subtypes": {
+      "characterization_memory_contradictions": 0.9026594507090553,
+      "characterization_knowledge_contradictions": 0.04785776560448886,
+      "characterization_skill_power_fluctuations": 0.12346181976041262,
+      "characterization_forgotten_abilities": 0.0,
+      "factual_detail_appearance_mismatches": 0.9799816133094729,
+      "factual_detail_nomenclature_confusions": 0.5665949868085822,
+      "factual_detail_quantitative_mismatches": 1.0112674855245758,
+      "narrative_style_perspective_confusions": 0.08562292587003553,
+      "narrative_style_tone_inconsistencies": 0.0,
+      "narrative_style_style_shifts": 0.05715645659344218,
+      "timeline_plot_absolute_time_contradictions": 0.23293569903870626,
+      "timeline_plot_duration_timeline_contradictions": 0.5270733597849016,
+      "timeline_plot_simultaneity_contradictions": 0.19179855509937194,
+      "timeline_plot_causeless_effects": 0.2464799808081071,
+      "timeline_plot_causal_logic_violations": 0.4162245846552725,
+      "timeline_plot_abandoned_plot_elements": 1.0566374370372897,
+      "world_building_core_rules_violations": 0.7054300955842437,
+      "world_building_social_norms_violations": 0.2396472625662557,
+      "world_building_geographical_contradictions": 0.3076166905256107
+     }
+    },
+    "RollSum": {
+     "categories": {
+      "characterization": 1.1429499107277679,
+      "factual_detail": 2.7649124285259985,
+      "narrative_style": 0.3766962158500403,
+      "timeline_plot": 3.2035170347115622,
+      "world_building": 1.4840869059064135
+     },
+     "subtypes": {
+      "characterization_memory_contradictions": 1.017225138667104,
+      "characterization_knowledge_contradictions": 0.02001342299069355,
+      "characterization_skill_power_fluctuations": 0.10571134906997023,
+      "characterization_forgotten_abilities": 0.0,
+      "factual_detail_appearance_mismatches": 1.1062820890840088,
+      "factual_detail_nomenclature_confusions": 0.7032163328673211,
+      "factual_detail_quantitative_mismatches": 0.9554140065746681,
+      "narrative_style_perspective_confusions": 0.10489193817337114,
+      "narrative_style_tone_inconsistencies": 0.010979358805445762,
+      "narrative_style_style_shifts": 0.2608249188712234,
+      "timeline_plot_absolute_time_contradictions": 0.2079877369891668,
+      "timeline_plot_duration_timeline_contradictions": 0.567375310264394,
+      "timeline_plot_simultaneity_contradictions": 0.25941094636281553,
+      "timeline_plot_causeless_effects": 0.46713417968675025,
+      "timeline_plot_causal_logic_violations": 0.5077745088864707,
+      "timeline_plot_abandoned_plot_elements": 1.1938343525219648,
+      "world_building_core_rules_violations": 0.8685237669533912,
+      "world_building_social_norms_violations": 0.21955651015825062,
+      "world_building_geographical_contradictions": 0.3960066287947717
+     }
+    }
+   },
+   "50K": {
+    "NstAgent": {
+     "categories": {
+      "characterization": 0.88318592788117,
+      "factual_detail": 2.6271435224234447,
+      "narrative_style": 0.1322806425444645,
+      "timeline_plot": 3.0022109183065906,
+      "world_building": 1.0500321922839735
+     },
+     "subtypes": {
+      "characterization_memory_contradictions": 0.832510352343201,
+      "characterization_knowledge_contradictions": 0.01110987668036885,
+      "characterization_skill_power_fluctuations": 0.03956569885760027,
+      "characterization_forgotten_abilities": 0.0,
+      "factual_detail_appearance_mismatches": 1.1460633948611385,
+      "factual_detail_nomenclature_confusions": 0.5934071269843575,
+      "factual_detail_quantitative_mismatches": 0.8876730005779492,
+      "narrative_style_perspective_confusions": 0.05028271703932702,
+      "narrative_style_tone_inconsistencies": 0.0,
+      "narrative_style_style_shifts": 0.08199792550513747,
+      "timeline_plot_absolute_time_contradictions": 0.10486632122273093,
+      "timeline_plot_duration_timeline_contradictions": 0.4182868120709032,
+      "timeline_plot_simultaneity_contradictions": 0.1740472289063393,
+      "timeline_plot_causeless_effects": 0.3304408535939555,
+      "timeline_plot_causal_logic_violations": 0.4259089214838535,
+      "timeline_plot_abandoned_plot_elements": 1.5486607810288087,
+      "world_building_core_rules_violations": 0.5680233921700397,
+      "world_building_social_norms_violations": 0.14153731856254026,
+      "world_building_geographical_contradictions": 0.3404714815513936
+     }
+    },
+    "RollSum": {
+     "categories": {
+      "characterization": 1.1019118190944948,
+      "factual_detail": 2.8633812313193596,
+      "narrative_style": 0.34147969233291425,
+      "timeline_plot": 3.340874776105326,
+      "world_building": 1.4478133260588886
+     },
+     "subtypes": {
+      "characterization_memory_contradictions": 0.9915965700775307,
+      "characterization_knowledge_contradictions": 0.030576325338909856,
+      "characterization_skill_power_fluctuations": 0.0797389236780544,
+      "characterization_forgotten_abilities": 0.0,
+      "factual_detail_appearance_mismatches": 1.043465652803445,
+      "factual_detail_nomenclature_confusions": 0.8654231506712025,
+      "factual_detail_quantitative_mismatches": 0.9544924278447126,
+      "narrative_style_perspective_confusions": 0.062221898616598,
+      "narrative_style_tone_inconsistencies": 0.0,
+      "narrative_style_style_shifts": 0.27925779371631626,
+      "timeline_plot_absolute_time_contradictions": 0.25434530483175705,
+      "timeline_plot_duration_timeline_contradictions": 0.5116493836789742,
+      "timeline_plot_simultaneity_contradictions": 0.1567435452465409,
+      "timeline_plot_causeless_effects": 0.24278545828749848,
+      "timeline_plot_causal_logic_violations": 0.5071871835493159,
+      "timeline_plot_abandoned_plot_elements": 1.6681639005112396,
+      "world_building_core_rules_violations": 0.7251038173006701,
+      "world_building_social_norms_violations": 0.32292085044803853,
+      "world_building_geographical_contradictions": 0.39978865831017985
+     }
+    }
+   },
+   "100K": {
+    "NstAgent": {
+     "categories": {
+      "characterization": 0.9416890967596859,
+      "factual_detail": 2.2573273594208803,
+      "narrative_style": 0.21773543870264647,
+      "timeline_plot": 2.970218722853955,
+      "world_building": 0.8310158258201292
+     },
+     "subtypes": {
+      "characterization_memory_contradictions": 0.8431121562346822,
+      "characterization_knowledge_contradictions": 0.021985269869187644,
+      "characterization_skill_power_fluctuations": 0.07659167065581618,
+      "characterization_forgotten_abilities": 0.0,
+      "factual_detail_appearance_mismatches": 0.8003961509653506,
+      "factual_detail_nomenclature_confusions": 0.7597745742560192,
+      "factual_detail_quantitative_mismatches": 0.6971566341995105,
+      "narrative_style_perspective_confusions": 0.02176515398846447,
+      "narrative_style_tone_inconsistencies": 0.0,
+      "narrative_style_style_shifts": 0.19597028471418199,
+      "timeline_plot_absolute_time_contradictions": 0.1723604106802571,
+      "timeline_plot_duration_timeline_contradictions": 0.30734702244832035,
+      "timeline_plot_simultaneity_contradictions": 0.15103532643906964,
+      "timeline_plot_causeless_effects": 0.13210429348713215,
+      "timeline_plot_causal_logic_violations": 0.30315154502772773,
+      "timeline_plot_abandoned_plot_elements": 1.904220124771448,
+      "world_building_core_rules_violations": 0.32665184650163503,
+      "world_building_social_norms_violations": 0.15295318115099574,
+      "world_building_geographical_contradictions": 0.35141079816749854
+     }
+    },
+    "RollSum": {
+     "categories": {
+      "characterization": 1.4845381815121956,
+      "factual_detail": 2.7380058691715696,
+      "narrative_style": 0.3034572537998471,
+      "timeline_plot": 3.54385949829256,
+      "world_building": 1.2995493828646913
+     },
+     "subtypes": {
+      "characterization_memory_contradictions": 1.3521107153185992,
+      "characterization_knowledge_contradictions": 0.04358051242304928,
+      "characterization_skill_power_fluctuations": 0.0888469537705471,
+      "characterization_forgotten_abilities": 0.0,
+      "factual_detail_appearance_mismatches": 0.7931884184882684,
+      "factual_detail_nomenclature_confusions": 0.7711269217344485,
+      "factual_detail_quantitative_mismatches": 1.1736905289488526,
+      "narrative_style_perspective_confusions": 0.0,
+      "narrative_style_tone_inconsistencies": 0.0,
+      "narrative_style_style_shifts": 0.3034572537998471,
+      "timeline_plot_absolute_time_contradictions": 0.27168152394697775,
+      "timeline_plot_duration_timeline_contradictions": 0.5421231546787334,
+      "timeline_plot_simultaneity_contradictions": 0.09647031186308375,
+      "timeline_plot_causeless_effects": 0.1776026477213548,
+      "timeline_plot_causal_logic_violations": 0.5167544760213554,
+      "timeline_plot_abandoned_plot_elements": 1.9392273840610548,
+      "world_building_core_rules_violations": 0.5518850989870453,
+      "world_building_social_norms_violations": 0.26339306083839653,
+      "world_building_geographical_contradictions": 0.4842712230392497
+     }
+    }
+   }
+  },
+  "ablation": {
+   "NstAgent": {
+    "categories": {
+     "characterization": 1.254907509045694,
+     "factual_detail": 2.510957243222843,
+     "narrative_style": 0.30515710996395634,
+     "timeline_plot": 2.6894232068467,
+     "world_building": 1.5899465588429036
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 1.066414366364704,
+     "characterization_knowledge_contradictions": 0.05632665709577182,
+     "characterization_skill_power_fluctuations": 0.1121851319222813,
+     "characterization_forgotten_abilities": 0.01998135366293658,
+     "factual_detail_appearance_mismatches": 0.7162778339265701,
+     "factual_detail_nomenclature_confusions": 0.21937185967191966,
+     "factual_detail_quantitative_mismatches": 1.5753075496243536,
+     "narrative_style_perspective_confusions": 0.06902793157272576,
+     "narrative_style_tone_inconsistencies": 0.018517839372004095,
+     "narrative_style_style_shifts": 0.21761133901922652,
+     "timeline_plot_absolute_time_contradictions": 0.2576701455813845,
+     "timeline_plot_duration_timeline_contradictions": 0.9438374604975437,
+     "timeline_plot_simultaneity_contradictions": 0.16298437885788716,
+     "timeline_plot_causeless_effects": 0.1427309734422375,
+     "timeline_plot_causal_logic_violations": 0.6495122273064414,
+     "timeline_plot_abandoned_plot_elements": 0.532688021161206,
+     "world_building_core_rules_violations": 1.028517152131706,
+     "world_building_social_norms_violations": 0.1534212899204762,
+     "world_building_geographical_contradictions": 0.4080081167907214
+    },
+    "n": 100
+   },
+   "-State": {
+    "categories": {
+     "characterization": 1.6059644986299155,
+     "factual_detail": 2.620090227079876,
+     "narrative_style": 0.42671679036945426,
+     "timeline_plot": 3.235744905998753,
+     "world_building": 1.5115569100395654
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 1.4908117457524475,
+     "characterization_knowledge_contradictions": 0.05676749181270886,
+     "characterization_skill_power_fluctuations": 0.0583852610647593,
+     "characterization_forgotten_abilities": 0.0,
+     "factual_detail_appearance_mismatches": 0.6391905712079256,
+     "factual_detail_nomenclature_confusions": 0.42581255900081744,
+     "factual_detail_quantitative_mismatches": 1.5550870968711328,
+     "narrative_style_perspective_confusions": 0.05662213965009671,
+     "narrative_style_tone_inconsistencies": 0.018843048202306804,
+     "narrative_style_style_shifts": 0.35125160251705073,
+     "timeline_plot_absolute_time_contradictions": 0.25096154267455667,
+     "timeline_plot_duration_timeline_contradictions": 0.9313784911013516,
+     "timeline_plot_simultaneity_contradictions": 0.15069962966431796,
+     "timeline_plot_causeless_effects": 0.23357744303662742,
+     "timeline_plot_causal_logic_violations": 0.8324734689447061,
+     "timeline_plot_abandoned_plot_elements": 0.8366543305771931,
+     "world_building_core_rules_violations": 0.93070343310697,
+     "world_building_social_norms_violations": 0.15989693943446612,
+     "world_building_geographical_contradictions": 0.42095653749812934
+    },
+    "n": 100
+   },
+   "-Lookback": {
+    "categories": {
+     "characterization": 1.5231367695391125,
+     "factual_detail": 2.8895195820532416,
+     "narrative_style": 0.4954803059465125,
+     "timeline_plot": 3.163515540095677,
+     "world_building": 1.7146328526694574
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 1.3978532902170588,
+     "characterization_knowledge_contradictions": 0.048283257237358754,
+     "characterization_skill_power_fluctuations": 0.07700022208469517,
+     "characterization_forgotten_abilities": 0.0,
+     "factual_detail_appearance_mismatches": 0.7158457626881959,
+     "factual_detail_nomenclature_confusions": 0.47919837757952727,
+     "factual_detail_quantitative_mismatches": 1.6944754417855188,
+     "narrative_style_perspective_confusions": 0.16503446333651972,
+     "narrative_style_tone_inconsistencies": 0.039534123393669074,
+     "narrative_style_style_shifts": 0.2909117192163237,
+     "timeline_plot_absolute_time_contradictions": 0.36441421273740365,
+     "timeline_plot_duration_timeline_contradictions": 1.1000942727196727,
+     "timeline_plot_simultaneity_contradictions": 0.16506225266376603,
+     "timeline_plot_causeless_effects": 0.2260987172437231,
+     "timeline_plot_causal_logic_violations": 0.6838320973919835,
+     "timeline_plot_abandoned_plot_elements": 0.6240139873391276,
+     "world_building_core_rules_violations": 0.9222091078438293,
+     "world_building_social_norms_violations": 0.155633845186237,
+     "world_building_geographical_contradictions": 0.6367898996393913
+    },
+    "n": 100
+   },
+   "RollSum (last 8)": {
+    "categories": {
+     "characterization": 1.7940395388655157,
+     "factual_detail": 3.2330671445817902,
+     "narrative_style": 0.8630750924289998,
+     "timeline_plot": 3.1475201054587347,
+     "world_building": 1.8795834791079498
+    },
+    "subtypes": {
+     "characterization_memory_contradictions": 1.6183333223344405,
+     "characterization_knowledge_contradictions": 0.09160133885026105,
+     "characterization_skill_power_fluctuations": 0.07515873346896938,
+     "characterization_forgotten_abilities": 0.008946144211844694,
+     "factual_detail_appearance_mismatches": 1.0752574237118042,
+     "factual_detail_nomenclature_confusions": 0.47630818139382525,
+     "factual_detail_quantitative_mismatches": 1.6815015394761608,
+     "narrative_style_perspective_confusions": 0.3130259901133594,
+     "narrative_style_tone_inconsistencies": 0.04851049149732372,
+     "narrative_style_style_shifts": 0.5015386108183167,
+     "timeline_plot_absolute_time_contradictions": 0.26344576840189093,
+     "timeline_plot_duration_timeline_contradictions": 0.9855943299440355,
+     "timeline_plot_simultaneity_contradictions": 0.17768271423494394,
+     "timeline_plot_causeless_effects": 0.22435733140667327,
+     "timeline_plot_causal_logic_violations": 0.793146786144625,
+     "timeline_plot_abandoned_plot_elements": 0.703293175326566,
+     "world_building_core_rules_violations": 1.0337997212621999,
+     "world_building_social_norms_violations": 0.24067004411290868,
+     "world_building_geographical_contradictions": 0.6051137137328411
+    },
+    "n": 100
+   }
+  }
+ }
+}
