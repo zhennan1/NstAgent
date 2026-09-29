@@ -1,10 +1,10 @@
 # NstAgent
 
-<!-- <p align="center">
+<p align="center">
   <a href="https://github.com/zhennan1/NstAgent">🌐 Github</a> |
-  <a href="https://arxiv.org/abs/XXXX.XXXXX">📖 Paper</a> |
+  <a href="https://arxiv.org/abs/2609.35759">📖 Paper</a> |
   <a href="https://huggingface.co/datasets/zhennan1/NstAgent">🤗 Data</a>
-</p> -->
+</p>
 
 ## Introduction
 
