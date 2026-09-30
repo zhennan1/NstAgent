@@ -1,0 +1,26 @@
+[
+ {
+  "key": "case1",
+  "backbone": "deepseek",
+  "length": "20k",
+  "id": 1338,
+  "nstagent": "deepseek_nstagent_20k_1338.json",
+  "rollsum": "deepseek_rollsum_20k_1338.json"
+ },
+ {
+  "key": "case2",
+  "backbone": "luna",
+  "length": "100k",
+  "id": 1591,
+  "nstagent": "luna_nstagent_100k_1591.json",
+  "rollsum": "luna_rollsum_100k_1591.json"
+ },
+ {
+  "key": "case3",
+  "backbone": "luna",
+  "length": "10k",
+  "id": 1454,
+  "nstagent": "luna_nstagent_10k_1454.json",
+  "rollsum": "luna_rollsum_10k_1454.json"
+ }
+]

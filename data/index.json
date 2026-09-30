@@ -1,0 +1,1807 @@
+[
+ {
+  "file": "deepseek_nstagent_100k_1712.json",
+  "id": 1712,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 40,
+  "word_count": 108813,
+  "scores": {
+   "sub": 4.726344645051517,
+   "ins": 4.726344645051517,
+   "checked_words": 10579,
+   "errors": 5,
+   "wq": 9.6
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_100k_1814.json",
+  "id": 1814,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 40,
+  "word_count": 110984,
+  "scores": {
+   "sub": 6.699205665613935,
+   "ins": 9.570293808019906,
+   "checked_words": 10449,
+   "errors": 10,
+   "wq": 8.4
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_100k_1993.json",
+  "id": 1993,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 40,
+  "word_count": 107601,
+  "scores": {
+   "sub": 7.662101331290106,
+   "ins": 14.36643999616895,
+   "checked_words": 10441,
+   "errors": 15,
+   "wq": 8.0
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_100k_1994.json",
+  "id": 1994,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 40,
+  "word_count": 111978,
+  "scores": {
+   "sub": 6.106071179344033,
+   "ins": 18.3182135380321,
+   "checked_words": 11464,
+   "errors": 21,
+   "wq": 9.6
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_100k_1996.json",
+  "id": 1996,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 40,
+  "word_count": 108485,
+  "scores": {
+   "sub": 7.450870820527149,
+   "ins": 10.244947378224829,
+   "checked_words": 10737,
+   "errors": 11,
+   "wq": 9.6
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_10k_1712.json",
+  "id": 1712,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 11,
+  "word_count": 13351,
+  "scores": {
+   "sub": 4.494045389858437,
+   "ins": 4.494045389858437,
+   "checked_words": 13351,
+   "errors": 6,
+   "wq": 9.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_10k_1814.json",
+  "id": 1814,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 10,
+  "word_count": 11927,
+  "scores": {
+   "sub": 5.030602833906263,
+   "ins": 5.030602833906263,
+   "checked_words": 11927,
+   "errors": 6,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_10k_1993.json",
+  "id": 1993,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 10,
+  "word_count": 11423,
+  "scores": {
+   "sub": 3.5017070822025738,
+   "ins": 5.252560623303861,
+   "checked_words": 11423,
+   "errors": 6,
+   "wq": 7.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_10k_1994.json",
+  "id": 1994,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 10,
+  "word_count": 11744,
+  "scores": {
+   "sub": 4.2574931880108995,
+   "ins": 5.960490463215259,
+   "checked_words": 11744,
+   "errors": 7,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_10k_1996.json",
+  "id": 1996,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 10,
+  "word_count": 11517,
+  "scores": {
+   "sub": 7.814535035165408,
+   "ins": 11.287661717461145,
+   "checked_words": 11517,
+   "errors": 13,
+   "wq": 8.4
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_20k_1338.json",
+  "id": 1338,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Imagine a story where a realm divided into six elemental kingdoms falls into chaos when a slumbering titan scatters their lands, forcing unlikely heroes from each color to unite and reclaim balance. F",
+  "chapters": 15,
+  "word_count": 23131,
+  "scores": {
+   "sub": 0.9139097057210747,
+   "ins": 0.9139097057210747,
+   "checked_words": 10942,
+   "errors": 1,
+   "wq": 9.2
+  },
+  "case": "case1"
+ },
+ {
+  "file": "deepseek_nstagent_20k_1712.json",
+  "id": 1712,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 15,
+  "word_count": 22210,
+  "scores": {
+   "sub": 4.017677782241864,
+   "ins": 5.02209722780233,
+   "checked_words": 9956,
+   "errors": 5,
+   "wq": 9.4
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_20k_1814.json",
+  "id": 1814,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 15,
+  "word_count": 23920,
+  "scores": {
+   "sub": 3.537318712415989,
+   "ins": 4.421648390519986,
+   "checked_words": 11308,
+   "errors": 5,
+   "wq": 9.0
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_20k_1993.json",
+  "id": 1993,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 15,
+  "word_count": 21946,
+  "scores": {
+   "sub": 7.24562674671359,
+   "ins": 12.421074422937584,
+   "checked_words": 9661,
+   "errors": 12,
+   "wq": 7.4
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_20k_1994.json",
+  "id": 1994,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 15,
+  "word_count": 22134,
+  "scores": {
+   "sub": 6.459948320413437,
+   "ins": 9.228497600590623,
+   "checked_words": 10836,
+   "errors": 10,
+   "wq": 8.6
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_20k_1996.json",
+  "id": 1996,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 15,
+  "word_count": 23177,
+  "scores": {
+   "sub": 6.5438908105076194,
+   "ins": 6.5438908105076194,
+   "checked_words": 10697,
+   "errors": 7,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_50k_1712.json",
+  "id": 1712,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 25,
+  "word_count": 55712,
+  "scores": {
+   "sub": 3.4599083124297203,
+   "ins": 4.324885390537151,
+   "checked_words": 11561,
+   "errors": 5,
+   "wq": 9.4
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_50k_1814.json",
+  "id": 1814,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 25,
+  "word_count": 54684,
+  "scores": {
+   "sub": 4.49034575662326,
+   "ins": 8.98069151324652,
+   "checked_words": 11135,
+   "errors": 10,
+   "wq": 8.6
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_50k_1993.json",
+  "id": 1993,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 25,
+  "word_count": 53542,
+  "scores": {
+   "sub": 9.327391439527412,
+   "ins": 13.47289874598404,
+   "checked_words": 9649,
+   "errors": 13,
+   "wq": 6.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_50k_1994.json",
+  "id": 1994,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 25,
+  "word_count": 59608,
+  "scores": {
+   "sub": 5.333333333333334,
+   "ins": 8.88888888888889,
+   "checked_words": 11250,
+   "errors": 10,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_50k_1996.json",
+  "id": 1996,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 25,
+  "word_count": 55268,
+  "scores": {
+   "sub": 5.292685508627077,
+   "ins": 6.351222610352493,
+   "checked_words": 9447,
+   "errors": 6,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_100k_1712.json",
+  "id": 1712,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 40,
+  "word_count": 97548,
+  "scores": {
+   "sub": 9.706853038245,
+   "ins": 23.296447291788002,
+   "checked_words": 10302,
+   "errors": 24,
+   "wq": 9.6
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_100k_1814.json",
+  "id": 1814,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 40,
+  "word_count": 100405,
+  "scores": {
+   "sub": 6.600037714501226,
+   "ins": 17.914388082217613,
+   "checked_words": 10606,
+   "errors": 19,
+   "wq": 9.0
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_100k_1993.json",
+  "id": 1993,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 40,
+  "word_count": 101659,
+  "scores": {
+   "sub": 9.582623509369677,
+   "ins": 18.100511073253834,
+   "checked_words": 9392,
+   "errors": 17,
+   "wq": 6.0
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_100k_1994.json",
+  "id": 1994,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 40,
+  "word_count": 102201,
+  "scores": {
+   "sub": 3.7323877950919098,
+   "ins": 7.4647755901838195,
+   "checked_words": 10717,
+   "errors": 8,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_100k_1996.json",
+  "id": 1996,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 40,
+  "word_count": 98229,
+  "scores": {
+   "sub": 8.895807850550428,
+   "ins": 13.343711775825643,
+   "checked_words": 8993,
+   "errors": 12,
+   "wq": 9.4
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_10k_1712.json",
+  "id": 1712,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 11,
+  "word_count": 11360,
+  "scores": {
+   "sub": 3.5211267605633805,
+   "ins": 3.5211267605633805,
+   "checked_words": 11360,
+   "errors": 4,
+   "wq": 9.6
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_10k_1814.json",
+  "id": 1814,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 10,
+  "word_count": 10421,
+  "scores": {
+   "sub": 6.7378958513812695,
+   "ins": 12.513235152565214,
+   "checked_words": 10389,
+   "errors": 13,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_10k_1993.json",
+  "id": 1993,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 10,
+  "word_count": 9903,
+  "scores": {
+   "sub": 6.058770069675856,
+   "ins": 10.097950116126427,
+   "checked_words": 9903,
+   "errors": 10,
+   "wq": 7.4
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_10k_1994.json",
+  "id": 1994,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 10,
+  "word_count": 10553,
+  "scores": {
+   "sub": 2.842793518430778,
+   "ins": 3.790391357907704,
+   "checked_words": 10553,
+   "errors": 4,
+   "wq": 8.6
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_10k_1996.json",
+  "id": 1996,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 10,
+  "word_count": 10365,
+  "scores": {
+   "sub": 6.77572355047914,
+   "ins": 7.743684057690446,
+   "checked_words": 10331,
+   "errors": 8,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_20k_1338.json",
+  "id": 1338,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Imagine a story where a realm divided into six elemental kingdoms falls into chaos when a slumbering titan scatters their lands, forcing unlikely heroes from each color to unite and reclaim balance. F",
+  "chapters": 15,
+  "word_count": 19405,
+  "scores": {
+   "sub": 5.838279653595408,
+   "ins": 9.73046608932568,
+   "checked_words": 10277,
+   "errors": 10,
+   "wq": 9.2
+  },
+  "case": "case1"
+ },
+ {
+  "file": "deepseek_rollsum_20k_1712.json",
+  "id": 1712,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 15,
+  "word_count": 20088,
+  "scores": {
+   "sub": 5.960067547432205,
+   "ins": 10.926790503625707,
+   "checked_words": 10067,
+   "errors": 11,
+   "wq": 9.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_20k_1814.json",
+  "id": 1814,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 15,
+  "word_count": 20799,
+  "scores": {
+   "sub": 5.227846998344516,
+   "ins": 6.970462664459353,
+   "checked_words": 11477,
+   "errors": 8,
+   "wq": 9.0
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_20k_1993.json",
+  "id": 1993,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 15,
+  "word_count": 20026,
+  "scores": {
+   "sub": 10.594240585572571,
+   "ins": 15.409804488105557,
+   "checked_words": 10383,
+   "errors": 16,
+   "wq": 8.0
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_20k_1994.json",
+  "id": 1994,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 15,
+  "word_count": 20057,
+  "scores": {
+   "sub": 4.596433167861739,
+   "ins": 6.435006435006435,
+   "checked_words": 10878,
+   "errors": 7,
+   "wq": 8.6
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_20k_1996.json",
+  "id": 1996,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 15,
+  "word_count": 21436,
+  "scores": {
+   "sub": 7.067762169802986,
+   "ins": 12.368583797155226,
+   "checked_words": 11319,
+   "errors": 14,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_50k_1712.json",
+  "id": 1712,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 25,
+  "word_count": 52605,
+  "scores": {
+   "sub": 4.585893790699807,
+   "ins": 7.337430065119691,
+   "checked_words": 10903,
+   "errors": 8,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_50k_1814.json",
+  "id": 1814,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 25,
+  "word_count": 51887,
+  "scores": {
+   "sub": 5.17491202649555,
+   "ins": 12.41978886358932,
+   "checked_words": 9662,
+   "errors": 12,
+   "wq": 8.2
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_50k_1993.json",
+  "id": 1993,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 25,
+  "word_count": 49924,
+  "scores": {
+   "sub": 12.924071082390954,
+   "ins": 23.694130317716745,
+   "checked_words": 9285,
+   "errors": 22,
+   "wq": 6.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_50k_1994.json",
+  "id": 1994,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 25,
+  "word_count": 54616,
+  "scores": {
+   "sub": 4.790648653827728,
+   "ins": 13.41381623071764,
+   "checked_words": 10437,
+   "errors": 14,
+   "wq": 9.0
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_rollsum_50k_1996.json",
+  "id": 1996,
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 25,
+  "word_count": 52187,
+  "scores": {
+   "sub": 9.962364401151207,
+   "ins": 19.924728802302415,
+   "checked_words": 9034,
+   "errors": 18,
+   "wq": 7.8
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_100k_1591.json",
+  "id": 1591,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Imagine a dusty VHS tape picked up at a forgotten thrift shop that, whenever watched by anyone born after 1990, implants vivid false memories of an alternate childhood. Explore themes of nostalgia dis",
+  "chapters": 40,
+  "word_count": 92915,
+  "scores": {
+   "sub": 8.706061595385787,
+   "ins": 10.882576994232233,
+   "checked_words": 9189,
+   "errors": 10,
+   "wq": 9.6
+  },
+  "case": "case2"
+ },
+ {
+  "file": "luna_nstagent_100k_1712.json",
+  "id": 1712,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 40,
+  "word_count": 95690,
+  "scores": {
+   "sub": 4.45335114673792,
+   "ins": 6.680026720106881,
+   "checked_words": 8982,
+   "errors": 6,
+   "wq": 9.4
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_100k_1814.json",
+  "id": 1814,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 40,
+  "word_count": 94050,
+  "scores": {
+   "sub": 3.3374123929246857,
+   "ins": 3.3374123929246857,
+   "checked_words": 8989,
+   "errors": 3,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_100k_1993.json",
+  "id": 1993,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 40,
+  "word_count": 90791,
+  "scores": {
+   "sub": 6.61740377192015,
+   "ins": 9.926105657880225,
+   "checked_words": 9067,
+   "errors": 9,
+   "wq": 7.4
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_100k_1994.json",
+  "id": 1994,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 40,
+  "word_count": 97218,
+  "scores": {
+   "sub": 7.669551879040211,
+   "ins": 8.765202147474527,
+   "checked_words": 9127,
+   "errors": 8,
+   "wq": 8.6
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_100k_1996.json",
+  "id": 1996,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 40,
+  "word_count": 95724,
+  "scores": {
+   "sub": 5.223568742164647,
+   "ins": 5.223568742164647,
+   "checked_words": 9572,
+   "errors": 5,
+   "wq": 9.4
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_10k_1454.json",
+  "id": 1454,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Create an original horror story about a discredited priest hired to investigate grisly killings in a dilapidated seaside asylum during a relentless storm. Explore themes of faith under siege, the corr",
+  "chapters": 10,
+  "word_count": 11299,
+  "scores": {
+   "sub": 8.089887640449438,
+   "ins": 13.48314606741573,
+   "checked_words": 11125,
+   "errors": 15,
+   "wq": 9.2
+  },
+  "case": "case3"
+ },
+ {
+  "file": "luna_nstagent_10k_1712.json",
+  "id": 1712,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 10,
+  "word_count": 11399,
+  "scores": {
+   "sub": 0.8894423196655697,
+   "ins": 0.8894423196655697,
+   "checked_words": 11243,
+   "errors": 1,
+   "wq": 9.4
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_10k_1814.json",
+  "id": 1814,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 10,
+  "word_count": 11423,
+  "scores": {
+   "sub": 2.654397451778446,
+   "ins": 5.308794903556892,
+   "checked_words": 11302,
+   "errors": 6,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_10k_1993.json",
+  "id": 1993,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 10,
+  "word_count": 10796,
+  "scores": {
+   "sub": 10.321854180350943,
+   "ins": 15.013606080510463,
+   "checked_words": 10657,
+   "errors": 16,
+   "wq": 8.0
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_10k_1994.json",
+  "id": 1994,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 10,
+  "word_count": 11392,
+  "scores": {
+   "sub": 5.321507760532151,
+   "ins": 5.321507760532151,
+   "checked_words": 11275,
+   "errors": 6,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_10k_1996.json",
+  "id": 1996,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 10,
+  "word_count": 10952,
+  "scores": {
+   "sub": 5.593362543115504,
+   "ins": 6.525589633634754,
+   "checked_words": 10727,
+   "errors": 7,
+   "wq": 9.0
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_20k_1712.json",
+  "id": 1712,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 15,
+  "word_count": 22663,
+  "scores": {
+   "sub": 3.8087983241287375,
+   "ins": 6.665397067225291,
+   "checked_words": 10502,
+   "errors": 7,
+   "wq": 9.8
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_20k_1814.json",
+  "id": 1814,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 15,
+  "word_count": 22522,
+  "scores": {
+   "sub": 5.689900426742533,
+   "ins": 9.48316737790422,
+   "checked_words": 10545,
+   "errors": 10,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_20k_1993.json",
+  "id": 1993,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 15,
+  "word_count": 21676,
+  "scores": {
+   "sub": 11.20733571064697,
+   "ins": 14.263881813550688,
+   "checked_words": 9815,
+   "errors": 14,
+   "wq": 7.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_20k_1994.json",
+  "id": 1994,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 15,
+  "word_count": 21957,
+  "scores": {
+   "sub": 6.625023660798789,
+   "ins": 11.357183418512209,
+   "checked_words": 10566,
+   "errors": 12,
+   "wq": 9.4
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_20k_1996.json",
+  "id": 1996,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 15,
+  "word_count": 22684,
+  "scores": {
+   "sub": 6.773756531836656,
+   "ins": 6.773756531836656,
+   "checked_words": 10334,
+   "errors": 7,
+   "wq": 9.0
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_50k_1712.json",
+  "id": 1712,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 25,
+  "word_count": 50976,
+  "scores": {
+   "sub": 2.9937132022752224,
+   "ins": 6.985330805308851,
+   "checked_words": 10021,
+   "errors": 7,
+   "wq": 9.8
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_50k_1814.json",
+  "id": 1814,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 25,
+  "word_count": 48113,
+  "scores": {
+   "sub": 7.8415996863360125,
+   "ins": 11.76239952950402,
+   "checked_words": 10202,
+   "errors": 12,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_50k_1993.json",
+  "id": 1993,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 25,
+  "word_count": 44517,
+  "scores": {
+   "sub": 8.104665971981012,
+   "ins": 10.420284821118443,
+   "checked_words": 8637,
+   "errors": 9,
+   "wq": 8.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_50k_1994.json",
+  "id": 1994,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 25,
+  "word_count": 48856,
+  "scores": {
+   "sub": 4.151100041511,
+   "ins": 4.151100041511,
+   "checked_words": 9636,
+   "errors": 4,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "luna_nstagent_50k_1996.json",
+  "id": 1996,
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 25,
+  "word_count": 48369,
+  "scores": {
+   "sub": 3.045994517209869,
+   "ins": 4.061326022946492,
+   "checked_words": 9849,
+   "errors": 4,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_100k_1591.json",
+  "id": 1591,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Imagine a dusty VHS tape picked up at a forgotten thrift shop that, whenever watched by anyone born after 1990, implants vivid false memories of an alternate childhood. Explore themes of nostalgia dis",
+  "chapters": 40,
+  "word_count": 99167,
+  "scores": {
+   "sub": 7.72626931567329,
+   "ins": 27.593818984547465,
+   "checked_words": 9060,
+   "errors": 25,
+   "wq": 9.4
+  },
+  "case": "case2"
+ },
+ {
+  "file": "luna_rollsum_100k_1712.json",
+  "id": 1712,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 40,
+  "word_count": 101313,
+  "scores": {
+   "sub": 3.630093474906979,
+   "ins": 3.630093474906979,
+   "checked_words": 11019,
+   "errors": 4,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_100k_1814.json",
+  "id": 1814,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 40,
+  "word_count": 99416,
+  "scores": {
+   "sub": 4.649432769202158,
+   "ins": 4.649432769202158,
+   "checked_words": 10754,
+   "errors": 5,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_100k_1993.json",
+  "id": 1993,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 40,
+  "word_count": 103067,
+  "scores": {
+   "sub": 8.024877119069114,
+   "ins": 15.04664459825459,
+   "checked_words": 9969,
+   "errors": 15,
+   "wq": 7.8
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_100k_1994.json",
+  "id": 1994,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 40,
+  "word_count": 98390,
+  "scores": {
+   "sub": 6.343165239454487,
+   "ins": 11.629136272333229,
+   "checked_words": 9459,
+   "errors": 11,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_100k_1996.json",
+  "id": 1996,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "100k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 40,
+  "word_count": 97883,
+  "scores": {
+   "sub": 2.932551319648094,
+   "ins": 3.9100684261974585,
+   "checked_words": 10230,
+   "errors": 4,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_10k_1454.json",
+  "id": 1454,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Create an original horror story about a discredited priest hired to investigate grisly killings in a dilapidated seaside asylum during a relentless storm. Explore themes of faith under siege, the corr",
+  "chapters": 10,
+  "word_count": 10849,
+  "scores": {
+   "sub": 5.620608899297424,
+   "ins": 5.620608899297424,
+   "checked_words": 10675,
+   "errors": 6,
+   "wq": 9.4
+  },
+  "case": "case3"
+ },
+ {
+  "file": "luna_rollsum_10k_1712.json",
+  "id": 1712,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 10,
+  "word_count": 11207,
+  "scores": {
+   "sub": 2.719361856417694,
+   "ins": 5.438723712835388,
+   "checked_words": 11032,
+   "errors": 6,
+   "wq": 9.6
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_10k_1814.json",
+  "id": 1814,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 10,
+  "word_count": 11236,
+  "scores": {
+   "sub": 2.7012425715829282,
+   "ins": 3.6016567621105713,
+   "checked_words": 11106,
+   "errors": 4,
+   "wq": 9.6
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_10k_1993.json",
+  "id": 1993,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 10,
+  "word_count": 10317,
+  "scores": {
+   "sub": 7.867820613690008,
+   "ins": 9.83477576711251,
+   "checked_words": 10168,
+   "errors": 10,
+   "wq": 7.4
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_10k_1994.json",
+  "id": 1994,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 10,
+  "word_count": 11383,
+  "scores": {
+   "sub": 3.546099290780142,
+   "ins": 5.319148936170213,
+   "checked_words": 11280,
+   "errors": 6,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_10k_1996.json",
+  "id": 1996,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "10k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 10,
+  "word_count": 10391,
+  "scores": {
+   "sub": 2.9394473838918285,
+   "ins": 2.9394473838918285,
+   "checked_words": 10206,
+   "errors": 3,
+   "wq": 8.6
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_20k_1712.json",
+  "id": 1712,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 15,
+  "word_count": 20121,
+  "scores": {
+   "sub": 5.424170101974398,
+   "ins": 7.593838142764157,
+   "checked_words": 9218,
+   "errors": 7,
+   "wq": 9.6
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_20k_1814.json",
+  "id": 1814,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 15,
+  "word_count": 20605,
+  "scores": {
+   "sub": 8.415737428992214,
+   "ins": 10.51967178624027,
+   "checked_words": 9506,
+   "errors": 10,
+   "wq": 9.4
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_20k_1993.json",
+  "id": 1993,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 15,
+  "word_count": 19581,
+  "scores": {
+   "sub": 7.556131260794474,
+   "ins": 10.79447322970639,
+   "checked_words": 9264,
+   "errors": 10,
+   "wq": 7.0
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_20k_1994.json",
+  "id": 1994,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 15,
+  "word_count": 20161,
+  "scores": {
+   "sub": 2.1235931195582927,
+   "ins": 5.308982798895731,
+   "checked_words": 9418,
+   "errors": 5,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_20k_1996.json",
+  "id": 1996,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "20k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 15,
+  "word_count": 21104,
+  "scores": {
+   "sub": 8.125126955108673,
+   "ins": 15.234613040828764,
+   "checked_words": 9846,
+   "errors": 15,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_50k_1712.json",
+  "id": 1712,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Imagine a story about a young London student entrusted with writing a message to launch into space, destined to return eight million years later. Show how conflicts flare when visionaries are dismisse",
+  "chapters": 25,
+  "word_count": 51634,
+  "scores": {
+   "sub": 9.347541596560106,
+   "ins": 12.151804075528137,
+   "checked_words": 10698,
+   "errors": 13,
+   "wq": 9.8
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_50k_1814.json",
+  "id": 1814,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Imagine a story about someone condemned for a terrible act they feel everyone secretly relishes. Write a tale that alternates between their burning desire for control and haunting memories of the deva",
+  "chapters": 25,
+  "word_count": 49743,
+  "scores": {
+   "sub": 7.914523149980214,
+   "ins": 9.893153937475267,
+   "checked_words": 10108,
+   "errors": 10,
+   "wq": 8.6
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_50k_1993.json",
+  "id": 1993,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Write a first-person detective story featuring a locked-room murder case. The story should be tightly plotted with strong suspense.",
+  "chapters": 25,
+  "word_count": 53525,
+  "scores": {
+   "sub": 6.7327113590458785,
+   "ins": 13.465422718091757,
+   "checked_words": 10397,
+   "errors": 14,
+   "wq": 8.0
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_50k_1994.json",
+  "id": 1994,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Write a tragic love story about a lord's daughter falling in love with a servant.",
+  "chapters": 25,
+  "word_count": 49591,
+  "scores": {
+   "sub": 3.140374751386999,
+   "ins": 4.187166335182665,
+   "checked_words": 9553,
+   "errors": 4,
+   "wq": 9.0
+  },
+  "case": null
+ },
+ {
+  "file": "luna_rollsum_50k_1996.json",
+  "id": 1996,
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "50k",
+  "lang": "en",
+  "prompt": "Write a novel about a teenage heroine who grows up and ends up changing the world",
+  "chapters": 25,
+  "word_count": 50831,
+  "scores": {
+   "sub": 4.753303545964445,
+   "ins": 5.703964255157334,
+   "checked_words": 10519,
+   "errors": 6,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_10k_1994_zh.json",
+  "id": 1994,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "zh",
+  "prompt": "写一个悲剧爱情故事，讲述一位领主的女儿爱上一名仆人。",
+  "chapters": 10,
+  "word_count": 11705,
+  "scores": {
+   "sub": 2.5630072618539086,
+   "ins": 4.271678769756514,
+   "checked_words": 11705,
+   "errors": 5,
+   "wq": 9.0
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_10k_1814_zh.json",
+  "id": 1814,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "zh",
+  "prompt": "设想一个故事：一个人因一桩可怕的行为而被定罪，而他觉得所有人都在暗自享受这件事。写一个故事，在他对掌控的强烈渴望与他所造成的毁灭挥之不去的记忆之间交替展开。探讨社会偏见、个人救赎，以及正义与复仇之间的微妙界限。",
+  "chapters": 10,
+  "word_count": 10404,
+  "scores": {
+   "sub": 1.9223375624759709,
+   "ins": 2.883506343713956,
+   "checked_words": 10404,
+   "errors": 3,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_10k_1996_zh.json",
+  "id": 1996,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "10k",
+  "lang": "zh",
+  "prompt": "写一部讲述一个少女英雄的成长并最终改变世界的小说",
+  "chapters": 10,
+  "word_count": 11182,
+  "scores": {
+   "sub": 7.154355213736362,
+   "ins": 8.048649615453407,
+   "checked_words": 11182,
+   "errors": 9,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_20k_1996_zh.json",
+  "id": 1996,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "zh",
+  "prompt": "写一部讲述一个少女英雄的成长并最终改变世界的小说",
+  "chapters": 15,
+  "word_count": 20464,
+  "scores": {
+   "sub": 2.954500689383494,
+   "ins": 3.9393342525113253,
+   "checked_words": 10154,
+   "errors": 4,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_20k_1994_zh.json",
+  "id": 1994,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "zh",
+  "prompt": "写一个悲剧爱情故事，讲述一位领主的女儿爱上一名仆人。",
+  "chapters": 16,
+  "word_count": 22032,
+  "scores": {
+   "sub": 6.288648988575621,
+   "ins": 8.384865318100827,
+   "checked_words": 9541,
+   "errors": 8,
+   "wq": 8.6
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_20k_1814_zh.json",
+  "id": 1814,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "20k",
+  "lang": "zh",
+  "prompt": "设想一个故事：一个人因一桩可怕的行为而被定罪，而他觉得所有人都在暗自享受这件事。写一个故事，在他对掌控的强烈渴望与他所造成的毁灭挥之不去的记忆之间交替展开。探讨社会偏见、个人救赎，以及正义与复仇之间的微妙界限。",
+  "chapters": 15,
+  "word_count": 21836,
+  "scores": {
+   "sub": 2.9667721518987342,
+   "ins": 2.9667721518987342,
+   "checked_words": 10112,
+   "errors": 3,
+   "wq": 8.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_50k_1994_zh.json",
+  "id": 1994,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "zh",
+  "prompt": "写一个悲剧爱情故事，讲述一位领主的女儿爱上一名仆人。",
+  "chapters": 25,
+  "word_count": 49566,
+  "scores": {
+   "sub": 6.20347394540943,
+   "ins": 9.305210918114144,
+   "checked_words": 9672,
+   "errors": 9,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_50k_1996_zh.json",
+  "id": 1996,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "zh",
+  "prompt": "写一部讲述一个少女英雄的成长并最终改变世界的小说",
+  "chapters": 25,
+  "word_count": 51647,
+  "scores": {
+   "sub": 8.28598484848485,
+   "ins": 11.837121212121213,
+   "checked_words": 8448,
+   "errors": 10,
+   "wq": 9.4
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_50k_1814_zh.json",
+  "id": 1814,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "50k",
+  "lang": "zh",
+  "prompt": "设想一个故事：一个人因一桩可怕的行为而被定罪，而他觉得所有人都在暗自享受这件事。写一个故事，在他对掌控的强烈渴望与他所造成的毁灭挥之不去的记忆之间交替展开。探讨社会偏见、个人救赎，以及正义与复仇之间的微妙界限。",
+  "chapters": 25,
+  "word_count": 50406,
+  "scores": {
+   "sub": 4.294149221685453,
+   "ins": 6.4412238325281805,
+   "checked_words": 9315,
+   "errors": 6,
+   "wq": 9.4
+  },
+  "case": null
+ }
+]

@@ -1,0 +1,182 @@
+[
+ {
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "10k",
+  "n": 100,
+  "sub": 4.5407148092756024,
+  "ins": 6.391996301653071,
+  "wq": 8.998
+ },
+ {
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "20k",
+  "n": 100,
+  "sub": 5.382326879033497,
+  "ins": 8.350391627922097,
+  "wq": 9.14
+ },
+ {
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "50k",
+  "n": 100,
+  "sub": 5.793105991625424,
+  "ins": 8.90607144727916,
+  "wq": 9.24
+ },
+ {
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "100k",
+  "n": 50,
+  "sub": 4.858642718039522,
+  "ins": 7.239002402074813,
+  "wq": 9.204
+ },
+ {
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "10k",
+  "n": 100,
+  "sub": 5.98118725158646,
+  "ins": 9.171242700909255,
+  "wq": 8.946
+ },
+ {
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "20k",
+  "n": 100,
+  "sub": 6.760501893587186,
+  "ins": 10.91728536044299,
+  "wq": 8.986
+ },
+ {
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "50k",
+  "n": 96,
+  "sub": 7.16206529684344,
+  "ins": 11.457676574366138,
+  "wq": 9.027083333333334
+ },
+ {
+  "backbone": "deepseek",
+  "method": "rollsum",
+  "length": "100k",
+  "n": 50,
+  "sub": 7.239245380372275,
+  "ins": 11.819629597371456,
+  "wq": 8.964
+ },
+ {
+  "backbone": "deepseek",
+  "method": "direct",
+  "length": "10k",
+  "n": 99,
+  "sub": 6.224532059949433,
+  "ins": 9.292601301899754,
+  "wq": 8.705050505050504
+ },
+ {
+  "backbone": "deepseek",
+  "method": "storywriter",
+  "length": "10k",
+  "n": 98,
+  "sub": 7.395473042029653,
+  "ins": 11.8034186988904,
+  "wq": 7.353061224489796
+ },
+ {
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "10k",
+  "n": 100,
+  "sub": 4.851962639805737,
+  "ins": 6.825551832122812,
+  "wq": 9.258
+ },
+ {
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "20k",
+  "n": 100,
+  "sub": 5.193062478318397,
+  "ins": 7.6984461692798245,
+  "wq": 9.216000000000001
+ },
+ {
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "50k",
+  "n": 100,
+  "sub": 5.271278590931173,
+  "ins": 7.694853203439644,
+  "wq": 9.21
+ },
+ {
+  "backbone": "luna",
+  "method": "nstagent",
+  "length": "100k",
+  "n": 50,
+  "sub": 4.88730775954969,
+  "ins": 7.217986443557297,
+  "wq": 9.244
+ },
+ {
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "10k",
+  "n": 100,
+  "sub": 4.638103266938932,
+  "ins": 6.6527505737896115,
+  "wq": 9.228
+ },
+ {
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "20k",
+  "n": 100,
+  "sub": 6.056741236184223,
+  "ins": 8.972162495721783,
+  "wq": 9.166
+ },
+ {
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "50k",
+  "n": 100,
+  "sub": 6.013531797339983,
+  "ins": 9.095460844910983,
+  "wq": 9.196
+ },
+ {
+  "backbone": "luna",
+  "method": "rollsum",
+  "length": "100k",
+  "n": 50,
+  "sub": 5.764597637298425,
+  "ins": 9.369410185640865,
+  "wq": 9.064
+ },
+ {
+  "backbone": "luna",
+  "method": "direct",
+  "length": "10k",
+  "n": 97,
+  "sub": 5.427702382075172,
+  "ins": 7.961069704970939,
+  "wq": 9.23298969072165
+ },
+ {
+  "backbone": "luna",
+  "method": "storywriter",
+  "length": "10k",
+  "n": 100,
+  "sub": 5.162846914817933,
+  "ins": 7.67909251920649,
+  "wq": 8.408
+ }
+]
