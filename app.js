@@ -635,6 +635,7 @@ async function route() {
   else if (page === "stories") await viewStories(root, a, b != null ? +b : undefined);
   else if (page === "cases") await viewCases(root);
   else await viewHome(root);
+  chatShow(page === "home" || !["demo", "stories", "cases"].includes(page));
   if (fresh) {
     // Entrance animations play once; later re-renders (e.g. live progress) must not replay them.
     root.classList.remove("enter"); void root.offsetWidth; root.classList.add("enter");
@@ -703,6 +704,7 @@ $("#lang").onclick = () => {
   LANG = LANG === "zh" ? "en" : "zh";
   try { localStorage.setItem("lang", LANG); } catch { }
   applyI18n();
+  chatText();
   Route.last = null;
   route();
 };

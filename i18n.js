@@ -57,6 +57,10 @@ const I18N = {
     "cat.characterization": "Characterization", "cat.factual_detail": "Factual detail", "cat.narrative_style": "Narrative style",
     "cat.timeline_plot": "Timeline and plot", "cat.world_building": "World building",
     "copy": "Copy", "copied": "Copied",
+    "chat.tip": "Ask for more information about this project", "chat.title": "Ask about NstAgent", "chat.sub": "Answers are based on the paper",
+    "chat.placeholder": "Ask a question…", "chat.hello": "Hi! I can answer questions about NstAgent and the paper: the method, experiments, results, and how to run the code.",
+    "chat.sugs": "How is NstAgent different from RollSum?|What does the narrative state contain?|How is consistency evaluated?|How can I run it myself?",
+    "chat.error": "Sorry, the assistant is not available right now. Please try again later.",
     "draft.writing": "Writing…", "draft.rejected": "This draft failed the length check and will be rewritten.", "draft.thinking": "Thinking…", "draft.waiting": "Preparing this chapter…", "draft.synopsis": "Chapter synopsis (from the outline)",
   },
   zh: {
@@ -116,6 +120,10 @@ const I18N = {
     "cat.characterization": "人物刻画", "cat.factual_detail": "事实细节", "cat.narrative_style": "叙事风格",
     "cat.timeline_plot": "时间线与情节", "cat.world_building": "世界观",
     "copy": "复制", "copied": "已复制",
+    "chat.tip": "询问关于此项目的更多信息", "chat.title": "关于 NstAgent 的问答", "chat.sub": "回答基于论文内容",
+    "chat.placeholder": "输入你的问题…", "chat.hello": "你好！我可以回答关于 NstAgent 和这篇论文的问题：方法、实验、结果，以及如何运行代码。",
+    "chat.sugs": "NstAgent 和 RollSum 有什么区别？|叙事状态包含哪些内容？|一致性是怎么评测的？|怎样在本地运行？",
+    "chat.error": "抱歉，问答助手暂时不可用，请稍后再试。",
     "draft.writing": "正在写作…", "draft.rejected": "这一稿没有通过字数检查，将会重写。", "draft.thinking": "思考中…", "draft.waiting": "正在准备本章…", "draft.synopsis": "本章概要（来自大纲）",
   },
 };
