@@ -174,6 +174,7 @@ async function viewDemo(root) {
 
 function fmtMinutes(m) {
   if (m < 60) return t("time.min", { n: m });
+  if (m > 60) return t("time.over");
   const h = m / 60;
   return t("time.hour", { n: Number.isInteger(h) ? h : h.toFixed(1) });
 }
