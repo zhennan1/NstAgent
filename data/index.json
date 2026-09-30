@@ -1803,5 +1803,62 @@
    "wq": 9.4
   },
   "case": null
+ },
+ {
+  "file": "deepseek_nstagent_100k_1996_zh.json",
+  "id": 1996,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "zh",
+  "prompt": "写一部讲述一个少女英雄的成长并最终改变世界的小说",
+  "chapters": 40,
+  "word_count": 99017,
+  "scores": {
+   "sub": 5.197505197505198,
+   "ins": 6.237006237006238,
+   "checked_words": 9620,
+   "errors": 6,
+   "wq": 9.8
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_100k_1814_zh.json",
+  "id": 1814,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "zh",
+  "prompt": "设想一个故事：一个人因一桩可怕的行为而被定罪，而他觉得所有人都在暗自享受这件事。写一个故事，在他对掌控的强烈渴望与他所造成的毁灭挥之不去的记忆之间交替展开。探讨社会偏见、个人救赎，以及正义与复仇之间的微妙界限。",
+  "chapters": 40,
+  "word_count": 96395,
+  "scores": {
+   "sub": 3.2747516646654296,
+   "ins": 7.641087217552669,
+   "checked_words": 9161,
+   "errors": 7,
+   "wq": 9.2
+  },
+  "case": null
+ },
+ {
+  "file": "deepseek_nstagent_100k_1994_zh.json",
+  "id": 1994,
+  "backbone": "deepseek",
+  "method": "nstagent",
+  "length": "100k",
+  "lang": "zh",
+  "prompt": "写一个悲剧爱情故事，讲述一位领主的女儿爱上一名仆人。",
+  "chapters": 40,
+  "word_count": 97204,
+  "scores": {
+   "sub": 5.3236797274275975,
+   "ins": 10.647359454855195,
+   "checked_words": 9392,
+   "errors": 10,
+   "wq": 8.8
+  },
+  "case": null
  }
 ]
