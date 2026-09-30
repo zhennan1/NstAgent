@@ -172,6 +172,19 @@ async function viewDemo(root) {
   renderDemo(root);
 }
 
+// Rough time for any length, interpolated from the measured lengths.
+function etaMinutes(words, opts) {
+  const pts = (opts || []).map(o => [o.words, o.minutes]).sort((x, y) => x[0] - y[0]);
+  if (!pts.length) return null;
+  if (words <= pts[0][0]) return Math.max(5, Math.round(pts[0][1] * words / pts[0][0]));
+  for (let i = 1; i < pts.length; i++) {
+    const [w0, m0] = pts[i - 1], [w1, m1] = pts[i];
+    if (words <= w1) return Math.round(m0 + (m1 - m0) * (words - w0) / (w1 - w0));
+  }
+  const [wl, ml] = pts[pts.length - 1];
+  return Math.round(ml * words / wl);
+}
+
 function fmtMinutes(m) {
   if (m < 60) return t("time.min", { n: m });
   if (m > 60) return t("time.over");
@@ -186,8 +199,10 @@ function renderDemo(root) {
   const own = Demo.mode === "own";
   const saved = (() => { try { return JSON.parse(sessionStorage.getItem("nst_own") || "{}"); } catch { return {}; } })();
   const opts = c.word_options || [];
-  if (!Demo.words || !opts.some(o => o.words === Demo.words)) Demo.words = (opts[0] || {}).words || 3000;
-  const cur = opts.find(o => o.words === Demo.words);
+  const minW = c.min_words || 1000, maxW = c.max_words || 100000;
+  if (!Demo.words) Demo.words = (opts[0] || {}).words || 3000;
+  const custom = Demo.customLen || !opts.some(o => o.words === Demo.words);
+  const eta = w => { const m = etaMinutes(w, opts); return m == null ? "" : t("demo.eta", { t: fmtMinutes(m) }); };
   root.innerHTML = `
   <div class="narrow">
     <h2 style="margin-top:0">${t("demo.title")}</h2>
@@ -202,8 +217,11 @@ function renderDemo(root) {
         <div class="note">${esc(t("demo.lang.note"))}</div>
       </div>
       <div class="field"><label>${t("demo.length")}</label>
-        <div class="seg" id="len">${opts.map(o => `<button data-w="${o.words}" class="${o.words === Demo.words ? "on" : ""}">${o.words.toLocaleString()}</button>`).join("")}</div>
-        <div class="note" id="eta">${cur ? esc(t("demo.eta", { t: fmtMinutes(cur.minutes) })) : ""}</div>
+        <div class="lenrow">
+          <div class="seg" id="len">${opts.map(o => `<button data-w="${o.words}" class="${!custom && o.words === Demo.words ? "on" : ""}">${o.words.toLocaleString()}</button>`).join("")}<button data-w="custom" class="${custom ? "on" : ""}">${t("demo.custom")}</button></div>
+          <input type="number" id="customlen" class="customlen ${custom ? "" : "hidden"}" min="${minW}" max="${maxW}" step="500" value="${Demo.words}">
+        </div>
+        <div class="note" id="eta">${esc(eta(Demo.words))}</div>
       </div>
       <div class="field">
         <div class="seg" id="mode">
@@ -225,12 +243,27 @@ function renderDemo(root) {
   </div>`;
   $$(".chip", root).forEach(b => b.onclick = () => { $("#prompt").value = EXAMPLES[LANG][+b.dataset.ex]; });
   $$("#mode button", root).forEach(b => b.onclick = () => { Demo.lastPrompt = $("#prompt").value; Demo.mode = b.dataset.m; renderDemo(root); });
+  const lenInput = $("#customlen");
   $$("#len button", root).forEach(b => b.onclick = () => {
-    Demo.words = +b.dataset.w;
     $$("#len button").forEach(x => x.classList.toggle("on", x === b));
-    const o = opts.find(x => x.words === Demo.words);
-    $("#eta").textContent = o ? t("demo.eta", { t: fmtMinutes(o.minutes) }) : "";
+    if (b.dataset.w === "custom") {
+      Demo.customLen = true;
+      lenInput.classList.remove("hidden");
+      lenInput.focus();
+      Demo.words = Math.min(maxW, Math.max(minW, +lenInput.value || Demo.words));
+    } else {
+      Demo.customLen = false;
+      lenInput.classList.add("hidden");
+      Demo.words = +b.dataset.w;
+      lenInput.value = Demo.words;
+    }
+    $("#eta").textContent = eta(Demo.words);
   });
+  lenInput.oninput = () => {
+    const w = Math.round(+lenInput.value);
+    if (w >= minW && w <= maxW) { Demo.words = w; $("#eta").textContent = eta(w); }
+    else $("#eta").textContent = t("demo.len.range", { a: minW.toLocaleString(), b: maxW.toLocaleString() });
+  };
   $("#start").onclick = startJob;
 }
 
@@ -238,6 +271,12 @@ async function startJob() {
   const prompt = $("#prompt").value.trim();
   const err = m => { $("#formerr").innerHTML = `<div class="status err">${esc(m)}</div>`; };
   if (!prompt) return err(LANG === "zh" ? "请输入故事提示。" : "Please enter a story prompt.");
+  const minW = Demo.config.min_words || 1000, maxW = Demo.config.max_words || 100000;
+  if (Demo.customLen) {
+    const w = Math.round(+$("#customlen").value);
+    if (!(w >= minW && w <= maxW)) return err(t("demo.len.range", { a: minW.toLocaleString(), b: maxW.toLocaleString() }));
+    Demo.words = w;
+  }
   const body = { prompt, words: Demo.words };
   if (Demo.mode === "own") {
     body.api_base = $("#base").value.trim();
@@ -582,16 +621,49 @@ async function viewCases(root) {
 }
 
 // ----------------------------------------------------------------------------- router
+const Route = { last: null };
 async function route() {
   const root = $("#view");
   const [page, a, b] = (location.hash.slice(1) || "home").split("/");
   root.classList.toggle("tight", page === "stories" && !!a);
   $$("#nav a").forEach(x => x.classList.toggle("active", x.getAttribute("href") === "#" + page));
   if (page !== "demo" && Demo.es && (!Demo.data || Demo.data.done || Demo.data.error)) { Demo.es.close(); Demo.es = null; }
+  const key = location.hash.split("/").slice(0, 2).join("/");
+  const fresh = Route.last !== key;
+  Route.last = key;
   if (page === "demo") await viewDemo(root);
   else if (page === "stories") await viewStories(root, a, b != null ? +b : undefined);
   else if (page === "cases") await viewCases(root);
   else await viewHome(root);
+  if (fresh) {
+    // Entrance animations play once; later re-renders (e.g. live progress) must not replay them.
+    root.classList.remove("enter"); void root.offsetWidth; root.classList.add("enter");
+    clearTimeout(Route.enterTimer);
+    Route.enterTimer = setTimeout(() => root.classList.remove("enter"), 1000);
+    const h = $("h1", root) || $("h2", root);
+    if (h && !h.closest(".live")) revealTitle(h);
+  }
+}
+
+// Reveal a heading character by character (the method name moves as one piece).
+function revealTitle(el) {
+  if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const text = el.textContent;
+  el.textContent = "";
+  el.setAttribute("aria-label", text);
+  let i = 0;
+  for (const part of text.split(/(NstAgent)/)) {
+    const chunks = part === "NstAgent" ? [part] : [...part];
+    for (const ch of chunks) {
+      const s = document.createElement("span");
+      s.className = "rv" + (ch === "NstAgent" ? " nst" : "");
+      s.textContent = ch;
+      s.setAttribute("aria-hidden", "true");
+      s.style.animationDelay = `${i * 38}ms`;
+      el.appendChild(s);
+      i++;
+    }
+  }
 }
 
 // Typeset every "NstAgent" in page text like the paper (small caps, Times).
@@ -631,6 +703,7 @@ $("#lang").onclick = () => {
   LANG = LANG === "zh" ? "en" : "zh";
   try { localStorage.setItem("lang", LANG); } catch { }
   applyI18n();
+  Route.last = null;
   route();
 };
 window.addEventListener("hashchange", route);

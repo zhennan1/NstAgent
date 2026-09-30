@@ -178,3 +178,57 @@ details summary { cursor: pointer; font-weight: 600; font-size: 14px; }
 /* Method name as in the paper: \textsc{NstAgent} in Times. */
 .nst { font-family: "Times New Roman", Times, "Nimbus Roman", "TeX Gyre Termes", serif; font-variant: small-caps; font-weight: inherit; letter-spacing: .01em; }
 .brand .nst { font-weight: 700; font-size: 21px; }
+
+/* ---------------------------------------------------------------- length picker */
+.lenrow { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.customlen { width: 130px !important; transition: opacity .2s, transform .2s; }
+.hidden { display: none; }
+
+/* ---------------------------------------------------------------- motion */
+@keyframes rise { from { opacity: 0; transform: translateY(.35em); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes draw { from { stroke-dashoffset: 400; } to { stroke-dashoffset: 0; } }
+@keyframes pop { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: none; } }
+@keyframes glow { 0% { box-shadow: 0 0 0 0 rgba(63, 143, 74, .35); } 100% { box-shadow: 0 0 0 8px rgba(63, 143, 74, 0); } }
+
+/* headings appear character by character */
+.rv { display: inline-block; white-space: pre; opacity: 0; animation: rise .55s cubic-bezier(.2, .7, .2, 1) forwards; }
+
+/* page content slides in once per page */
+main.enter > * { animation: fadeIn .45s ease both; }
+main.enter > *:nth-child(2) { animation-delay: .05s; }
+main.enter .narrow > *:not(h1):not(h2) { animation: fadeIn .5s ease both; }
+main.enter .narrow > *:nth-child(2) { animation-delay: .15s; }
+main.enter .narrow > *:nth-child(3) { animation-delay: .22s; }
+main.enter .narrow > *:nth-child(4) { animation-delay: .29s; }
+main.enter .narrow > *:nth-child(n+5) { animation-delay: .36s; }
+main.enter .list > .item { animation: fadeIn .4s ease both; }
+main.enter .list > .item:nth-child(2) { animation-delay: .04s; }
+main.enter .list > .item:nth-child(3) { animation-delay: .08s; }
+main.enter .list > .item:nth-child(4) { animation-delay: .12s; }
+main.enter .list > .item:nth-child(n+5) { animation-delay: .16s; }
+main.enter .cases > .case:nth-child(2) { animation-delay: .1s; }
+main.enter .cases > .case:nth-child(3) { animation-delay: .2s; }
+
+/* result charts draw their lines */
+.chart polyline { stroke-dasharray: 400; stroke-dashoffset: 400; animation: draw 1.4s .3s ease-out forwards; }
+.chart circle { opacity: 0; animation: pop .35s ease-out forwards; animation-delay: 1.2s; transform-box: fill-box; transform-origin: center; }
+
+/* buttons and cards respond to the pointer */
+.btn, .chip, .item, .seg button { transition: transform .15s ease, box-shadow .15s ease, background .15s, color .15s, border-color .15s; }
+.btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(20, 30, 40, .12); }
+.item:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(20, 30, 40, .08); }
+.errs .e { transition: border-color .2s, background .2s; }
+
+/* story text fades in when the chapter changes; streamed paragraphs fade in too */
+.live.story .reader > p, .live.story .reader > h3 { animation: fadeIn .35s ease both; }
+
+/* newly added state entries glow once */
+.live.story .entry.new { animation: glow 1.2s ease-out 1; }
+.live.story .tag { animation: pop .3s ease-out both; }
+
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .rv, .chart polyline, .chart circle { opacity: 1; stroke-dashoffset: 0; }
+}
