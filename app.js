@@ -216,6 +216,9 @@ function renderDemo(root) {
         </div>
         <div class="note">${esc(t("demo.lang.note"))}</div>
       </div>
+      <div class="field"><label>${t("demo.storylang")}</label>
+        <div class="seg" id="slang">${["auto", "zh", "en"].map(l => `<button data-l="${l}" class="${(Demo.storyLang || "auto") === l ? "on" : ""}">${t("slang." + l)}</button>`).join("")}</div>
+      </div>
       <div class="field"><label>${t("demo.length")}</label>
         <div class="lenrow">
           <div class="seg" id="len">${opts.map(o => `<button data-w="${o.words}" class="${!custom && o.words === Demo.words ? "on" : ""}">${o.words.toLocaleString()}</button>`).join("")}<button data-w="custom" class="${custom ? "on" : ""}">${t("demo.custom")}</button></div>
@@ -243,6 +246,10 @@ function renderDemo(root) {
   </div>`;
   $$(".chip", root).forEach(b => b.onclick = () => { $("#prompt").value = EXAMPLES[LANG][+b.dataset.ex]; });
   $$("#mode button", root).forEach(b => b.onclick = () => { Demo.lastPrompt = $("#prompt").value; Demo.mode = b.dataset.m; renderDemo(root); });
+  $$("#slang button", root).forEach(b => b.onclick = () => {
+    Demo.storyLang = b.dataset.l;
+    $$("#slang button").forEach(x => x.classList.toggle("on", x === b));
+  });
   const lenInput = $("#customlen");
   $$("#len button", root).forEach(b => b.onclick = () => {
     $$("#len button").forEach(x => x.classList.toggle("on", x === b));
@@ -277,7 +284,7 @@ async function startJob() {
     if (!(w >= minW && w <= maxW)) return err(t("demo.len.range", { a: minW.toLocaleString(), b: maxW.toLocaleString() }));
     Demo.words = w;
   }
-  const body = { prompt, words: Demo.words };
+  const body = { prompt, words: Demo.words, lang: Demo.storyLang || "auto" };
   if (Demo.mode === "own") {
     body.api_base = $("#base").value.trim();
     body.model = $("#model").value.trim();
