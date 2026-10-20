@@ -6,6 +6,10 @@
   <a href="https://huggingface.co/datasets/zhennan1/NstAgent">🤗 Data</a>
 </p>
 
+## Try Online
+
+Try NstAgent online for free on our [project website](https://zhennan1.github.io/NstAgent/).
+
 ## Introduction
 
 NstAgent (Narrative State Tracking Agent) is a training-free agentic framework for scaling long-form story generation toward full-length novels.
